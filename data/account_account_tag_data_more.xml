@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+      <!-- Tax Tags - Add More Tags-->
+
+        <record id="tag_V_ITBIS_16" model="account.account.tag">
+            <field name="name">V-ITBIS 16%</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_C_ITBIS_16" model="account.account.tag">
+            <field name="name">C-ITBIS 16%</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_C_ITBIS_PROP" model="account.account.tag">
+            <field name="name">C-ITBIS-PROP</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_C_ITBIS_COSTO" model="account.account.tag">
+            <field name="name">C-ITBIS-COSTO</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+    </data>
+</odoo>
