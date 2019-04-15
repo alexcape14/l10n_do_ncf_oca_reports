@@ -1,6 +1,6 @@
 # NCF DGII Reports
 
-Este módulo para ODOO 11 implementa los reportes de los números de comprobantes fiscales (NCF) para el cumplimento de la norma 06-18 de la Dirección de Impuestos Internos (DGII) en la República Dominicana, así como una guía para los reportes del ITBIS (IT1) y del anexo A del IT-1 (ITA). Ha sido probado en una empresa de servicios básica y necesita validaciones y calculos extras para ser implementado en negocios de personas físicas que usan su cédula como RNC, empresas de construcción, empresas de telecomunicaciones y proveedores del estado.
+Este módulo para ODOO 12 implementa los reportes de los números de comprobantes fiscales (NCF) para el cumplimento de la norma 06-18 de la Dirección de Impuestos Internos (DGII) en la República Dominicana, así como una guía para los reportes del ITBIS (IT1) y del anexo A del IT-1 (ITA). Ha sido probado en una empresa de servicios básica y necesita validaciones y calculos extras para ser implementado en negocios de personas físicas que usan su cédula como RNC, empresas de construcción, empresas de telecomunicaciones y proveedores del estado.
 
 Este repositorio tiene como objetivo que este módulo sea integrado en https://github.com/odoo-dominicana/l10n-dominicana y que sea mantenido por la comunidad de ODOO Dominicana.  Mientras tanto todo aquel que desee colaborar, puede hacer un Pull Request aquí.
 
