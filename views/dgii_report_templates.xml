@@ -2,7 +2,7 @@
 <odoo>
     <template id="assets_backend" name="ncf_dgii_reports_template" inherit_id="web.assets_backend">
         <xpath expr="." position="inside">
-            <link rel="stylesheet" type="text/css" href='/ncf_dgii_reports/static/src/less/dgii_reports.css'/>
+            <link rel="stylesheet" type="text/css" href='/l10n_do_ncf_oca_reports/static/src/less/dgii_reports.css'/>
         </xpath>
     </template>
 
