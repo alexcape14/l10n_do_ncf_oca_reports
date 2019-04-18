@@ -4,56 +4,83 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 12.0+e\n"
+"Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-16 23:02+0000\n"
-"PO-Revision-Date: 2018-04-16 23:02+0000\n"
-"Last-Translator: <>\n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-04-18 19:58+0000\n"
+"PO-Revision-Date: 2019-04-18 19:58+0000\n"
+"Last-Translator: Jeffry J. De La Rosa <jeffryjesus@gmail.com>, 2019\n"
+"Language-Team: Spanish (Dominican Republic) (https://www.softnet.do)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.dgii_report_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.dgii_report_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_supplier_form_inherited
 msgid "606"
 msgstr ""
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_ncf_dgii_reports_purchase_binary
-msgid "Archivo 606"
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__purchase_binary_xlsx
+msgid "606 Archivo Excel"
 msgstr ""
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.dgii_report_form_view
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__purchase_binary
+msgid "606 Archivo TXT"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.dgii_report_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_form_inherited
 msgid "607"
 msgstr ""
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_ncf_dgii_reports_sale_binary
-msgid "Archivo 607"
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__sale_binary_xlsx
+msgid "607 Archivo Excel"
 msgstr ""
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.dgii_report_form_view
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__sale_binary
+msgid "607 Archivo TXT"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.dgii_report_form_view
+msgid "607 Reported Operations by NCF Type"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.dgii_report_form_view
 msgid "608"
 msgstr ""
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_ncf_dgii_reports_cancel_binary
-msgid "Archivo 608"
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__cancel_binary_xlsx
+msgid "608 Archivo Excel"
 msgstr ""
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.dgii_report_form_view
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__cancel_binary
+msgid "608 Archivo TXT"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.dgii_report_form_view
 msgid "609"
 msgstr ""
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_ncf_dgii_reports_exterior_binary
-msgid "609 file"
-msgstr "Archivo 609"
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__exterior_binary_xlsx
+msgid "609 Archivo Excel"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__exterior_binary
+msgid "609 Archivo TXT"
+msgstr ""
 
 #. module: l10n_do_ncf_oca_reports
 #: selection:account.account,account_fiscal_type:0
@@ -107,7 +134,7 @@ msgstr ""
 
 #. module: l10n_do_ncf_oca_reports
 #: selection:account.account,account_fiscal_type:0
-msgid "A29 - ITBIS en Bienes o Servicios sujetos a Proporcionalidad"
+msgid "A29 - ITBIS en Compras de Bienes o Servicios Sujetos a Proporcionalidad"
 msgstr ""
 
 #. module: l10n_do_ncf_oca_reports
@@ -181,214 +208,516 @@ msgid "Account"
 msgstr "Cuenta"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_account_account_fiscal_type
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_account__account_fiscal_type
 msgid "Account Fiscal Type"
-msgstr "Tipo de Cuenta Fiscal"
+msgstr "Tipo Cuenta Fiscal"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_invoice_advance_itbis
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_advance_itbis
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line_advance_itbis
-msgid "Advance Itbis"
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__message_needaction
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__message_needaction
+msgid "Action Needed"
+msgstr "Acción requerida"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__activity_ids
+msgid "Activities"
+msgstr "Actividades"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__activity_state
+msgid "Activity State"
+msgstr "Estado de la actividad"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_invoice__advance_itbis
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__advance_itbis
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line__advance_itbis
+msgid "Advance ITBIS"
 msgstr "ITBIS por Adelantar"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_cancel_line_anulation_type
-msgid "Anulation Type"
-msgstr "Tipo de Cancelación"
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_supplier_form_inherited
+msgid "Advanced ITBIS"
+msgstr "ITBIS por Adelantar"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line_bank
+#: selection:report.606.line,type_of_withholding_isr:0
+msgid "Alquileres"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_summary__amount
+msgid "Amount"
+msgstr "Importe"
+
+#. module: l10n_do_ncf_oca_reports
+#: code:addons/l10n_do_ncf_oca_reports/models/account.py:146
+#, python-format
+msgid "An invoice cannot have multiple withholding taxes."
+msgstr "Una Factura No Puede tener Varias Retenciones"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_cancel_line__anulation_type
+msgid "Anulation Type"
+msgstr "Tipo De Anulación"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__purchase_binary
+msgid "Archivo 606 TXT"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: selection:account.invoice,service_type:0
+msgid "Arrendamientos"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__message_attachment_count
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__message_attachment_count
+msgid "Attachment Count"
+msgstr "Conteo de archivos adjuntos"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line__bank
 msgid "Bank"
 msgstr "Banco"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line_bond
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line__bond
 msgid "Bond"
 msgstr "Bonos o Certificados de Regalo"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_cancel_filename
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__cancel_ids
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__cancel_filename
 msgid "Cancel Filename"
 msgstr "Cancelar Archivo"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_cancel_records
-msgid "Cancel Records"
-msgstr "Cancelar Registros"
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__cancel_filename_xlsx
+msgid "Cancel Filename Xlsx"
+msgstr "Cancelar Archivo Xlsx"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line_card
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__cancel_records
+msgid "Cancel Records"
+msgstr "Cancel Records"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__count_register
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_607__count_register
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_608__count_register
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_609__count_register
+msgid "Count Register"
+msgstr "Cantidad de Registros"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line__card
 msgid "Card"
 msgstr "Tarjeta"
 
 #. module: l10n_do_ncf_oca_reports
 #: selection:account.invoice,payment_form:0
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line_cash
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__cash
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line__cash
 msgid "Cash"
 msgstr "Efectivo"
 
 #. module: l10n_do_ncf_oca_reports
 #: selection:account.invoice,payment_form:0
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__bank
 msgid "Check / Transfer / Deposit"
 msgstr "Cheque / Transferencia / Depósito"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_company_id
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_607_line__check_transfer_deposit
+msgid "Check / Transfer / Deposit"
+msgstr "Cheque / Transferencia / Depósito"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_invoice_service_type_detail__code
+msgid "Code"
+msgstr "Código"
+
+#. module: l10n_do_ncf_oca_reports
+#: code:addons/l10n_do_ncf_oca_reports/models/account.py:116
+#, python-format
+msgid "Code must be unique"
+msgstr "Código Debe Ser único"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__company_id
 msgid "Company"
 msgstr "Compañía"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_invoice_cost_itbis
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_cost_itbis
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line_cost_itbis
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_supplier_form_inherited
+#: selection:dgii.report.606,state:0
+#: selection:dgii.report.607,state:0
+#: selection:dgii.report.608,state:0
+#: selection:dgii.report.609,state:0
+msgid "With Erros"
+msgstr "Con Errores"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model,name:l10n_do_ncf_oca_reports.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: l10n_do_ncf_oca_reports
+#: selection:account.tax,purchase_tax_type:0
+msgid "Contribución Desarrollo Telecomunicaciones (CDT)"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_invoice__cost_itbis
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__cost_itbis
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line__cost_itbis
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_supplier_form_inherited
 msgid "Cost Itbis"
 msgstr "ITBIS llevado Al Costo"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_invoice_proportionality_tax
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_proportionality_tax
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line_proportionality_tax
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_supplier_form_inherited
-msgid "Proporcional Itbis"
-msgstr "ITBIS Sujeto a Proporcionalidad"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line_country_code
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line__country_code
 msgid "Country Code"
-msgstr "Código Del País"
+msgstr "Código De País"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_cancel_line_create_uid
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line_create_uid
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_create_uid
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line_create_uid
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line_create_uid
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__create_uid
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_607__create_uid
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_608__create_uid
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_609__create_uid
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__create_uid
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_cancel_line__create_uid
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line__create_uid
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line__create_uid
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line__create_uid
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_summary__create_uid
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_invoice_service_type_detail__create_uid
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_606_line__create_uid
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_607_line__create_uid
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_608_line__create_uid
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_609_line__create_uid
 msgid "Created by"
-msgstr "Creado Por"
+msgstr "Creado por"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_cancel_line_create_date
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line_create_date
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_create_date
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line_create_date
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line_create_date
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__create_date
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_607__create_date
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_608__create_date
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_609__create_date
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__create_date
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_cancel_line__create_date
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line__create_date
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line__create_date
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line__create_date
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_summary__create_date
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_invoice_service_type_detail__create_date
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_606_line__create_date
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_607_line__create_date
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_608_line__create_date
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_609_line__create_date
 msgid "Created on"
-msgstr "Creado en"
+msgstr "Creado el"
 
 #. module: l10n_do_ncf_oca_reports
 #: selection:account.invoice,payment_form:0
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line_credit
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__credit
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line__credit
 msgid "Credit"
 msgstr "A Crédito"
 
 #. module: l10n_do_ncf_oca_reports
 #: selection:account.invoice,payment_form:0
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__card
 msgid "Credit Card / Debit Card"
 msgstr "Tarjeta de Crédito / Débito"
 
 #. module: l10n_do_ncf_oca_reports
 #: selection:account.invoice,payment_form:0
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line_credit_note
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line_credit_note
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line__credit_note
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line__credit_note
 msgid "Credit Note"
 msgstr "Nota de Crédito"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_currency_id
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__currency_id
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_summary__currency_id
 msgid "Currency"
 msgstr "Moneda"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.ui.menu,name:l10n_do_ncf_oca_reports.dgii_report_menu
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_form_inherited
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_supplier_form_inherited
+#: model:ir.ui.menu,name:l10n_do_ncf_oca_reports.dgii_root_menu
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_form_inherited
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_supplier_form_inherited
 msgid "DGII"
 msgstr ""
 
 #. module: l10n_do_ncf_oca_reports
 #: model:ir.actions.act_window,name:l10n_do_ncf_oca_reports.dgii_report_action
-msgid "DGII Statements"
-msgstr "Reportes DGII"
+#: model:ir.ui.menu,name:l10n_do_ncf_oca_reports.dgii_report_menu
+msgid "Reports"
+msgstr "Reportes"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_cancel_line_dgii_report_id
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line_dgii_report_id
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line_dgii_report_id
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line_dgii_report_id
-msgid "Dgii Report"
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__ast_income
+msgid "Depreciable Assets Income"
+msgstr "Activos Depreciable"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,help:l10n_do_ncf_oca_reports.field_report_606_line__isr_perceived_in_purchases
+#: model:ir.model.fields,help:l10n_do_ncf_oca_reports.field_report_606_line__itbis_perceived_in_purchases
+msgid "Desabilitado"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_cancel_line__dgii_report_id
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line__dgii_report_id
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line__dgii_report_id
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line__dgii_report_id
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_summary__dgii_report_id
+msgid "DGII Report"
 msgstr "Reporte DGII"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_cancel_line_display_name
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line_display_name
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_display_name
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line_display_name
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line_display_name
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_606_line__dgii_report_606_id
+msgid "DGII Report 606"
+msgstr "Reporte DGII 606"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_607_line__dgii_report_607_id
+msgid "DGII Report 607"
+msgstr "Reporte DGII 607"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_608_line__dgii_report_608_id
+msgid "DGII Report 608"
+msgstr "Reporte DGII 608"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_609_line__dgii_report_609_id
+msgid "DGII Report 609"
+msgstr "Reporte DGII 609"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__display_name
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_607__display_name
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_608__display_name
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_609__display_name
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__display_name
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_cancel_line__display_name
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line__display_name
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line__display_name
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line__display_name
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_summary__display_name
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_invoice_service_type_detail__display_name
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_606_line__display_name
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_607_line__display_name
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_608_line__display_name
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_609_line__display_name
 msgid "Display Name"
-msgstr "Nombre"
+msgstr "Nombre a mostrar"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line_doc_date
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line__doc_date
 msgid "Doc Date"
-msgstr "Fecha De Documento"
+msgstr "Fecha Documento"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line_doc_number
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line__doc_number
 msgid "Doc Number"
 msgstr "Número De Documento"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line_expense_type
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line_expense_type
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_607_line__cash
+msgid "Cash"
+msgstr "Efectivo"
+
+#. module: l10n_do_ncf_oca_reports
+#: sql_constraint:invoice.service.type.detail:0
+msgid "El código debe ser único"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__company_id
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_607__company_id
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_608__company_id
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_609__company_id
+msgid "Company"
+msgstr "Empresa"
+
+#. module: l10n_do_ncf_oca_reports
+#: code:addons/l10n_do_ncf_oca_reports/models/dgii_report.py:236
+#, python-format
+msgid "Error. Date format must be MM/YYYY"
+msgstr "Error. El Formato De Fecha debe ser MM/AAAA"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__state
+msgid "State"
+msgstr "Estado"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line__expense_type
 msgid "Expense Type"
 msgstr "Tipo De Gasto"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_filename
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__exterior_ids
+msgid "Exterior"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__exterior_filename
 msgid "Exterior Filename"
 msgstr "Archivo Exterior"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_invoiced_amount
-msgid "Exterior Invoiced Amount"
-msgstr "Monto Facturado"
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__exterior_filename_xlsx
+msgid "Exterior Filename Xlsx"
+msgstr "Archivo Exterior Xlsx"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_records
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__exterior_invoiced_amount
+msgid "Exterior Invoiced Amount"
+msgstr "Monto De Factura Exterior"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__exterior_records
 msgid "Exterior Records"
 msgstr "Registros Exterior"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_withholded_isr
-msgid "Exterior Withholded Isr"
-msgstr "ISR Retenido"
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__exterior_withholded_isr
+msgid "Exterior Withholded ISR"
+msgstr "Retencion ISR Exterior"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_cancel_line_fiscal_invoice_number
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line_fiscal_invoice_number
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line_fiscal_invoice_number
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__ext_income
+msgid "Extraordinary Income"
+msgstr "Ingreso Extraordinario"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_606_line__voucher_date
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_607_line__voucher_date
+msgid "Voucher Date"
+msgstr "Fecha De Comprobante"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_606_line__payment_date
+msgid "Paymente Date"
+msgstr "Fecha De Pago"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_607_line__retention_date
+msgid "Fecha de Retención"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__fin_income
+msgid "Financial Income"
+msgstr "Ingreso Financierio"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_cancel_line__fiscal_invoice_number
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line__fiscal_invoice_number
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line__fiscal_invoice_number
 msgid "Fiscal Invoice Number"
-msgstr "NCF"
+msgstr "Número Factura Fiscal"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.dgii_report_form_view
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_invoice__fiscal_status
+msgid "Fiscal Status"
+msgstr "Estado Fiscal"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__message_follower_ids
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__message_channel_ids
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Seguidores (Canales)"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__message_partner_ids
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Empresas)"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_606_line__way_to_pay
+msgid "Way To Pay"
+msgstr "Forma De Pago"
+
+#. module: l10n_do_ncf_oca_reports
+#: selection:account.invoice,service_type:0
+msgid "Gastos Financieros"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: selection:account.invoice,service_type:0
+msgid "Gastos de Activos Fijos"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: selection:account.invoice,service_type:0
+msgid "Gastos de Personal"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: selection:account.invoice,service_type:0
+msgid "Gastos de Representación"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: selection:account.invoice,service_type:0
+msgid "Gastos de Seguros"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: selection:account.invoice,service_type:0
+msgid "Gastos por Regalías y otros Intangibles"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: selection:account.invoice,service_type:0
+msgid "Gastos por Trabajos, Suministros y Servicios"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.dgii_report_form_view
 msgid "Generate Statements"
-msgstr "Generar Reportes"
+msgstr "Generar Estados"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.dgii_report_form_view
-msgid "Set as sent"
-msgstr "Marcar Como Enviado"
+#: selection:dgii.reports,state:0
+msgid "Generated"
+msgstr "Generado"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_invoice_good_total_amount
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_good_total_amount
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line_good_total_amount
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_supplier_form_inherited
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__bond
+msgid "Gift certificates or vouchers"
+msgstr "Certificado or Comprobante"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_invoice__good_total_amount
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__good_total_amount
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line__good_total_amount
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_supplier_form_inherited
 msgid "Good Total Amount"
-msgstr "Facturado en Bienes"
+msgstr "Monto Total De Bienes"
+
+#. module: l10n_do_ncf_oca_reports
+#: selection:report.606.line,type_of_withholding_isr:0
+msgid "Honorarios por Servicios"
+msgstr ""
 
 #. module: l10n_do_ncf_oca_reports
 #: selection:account.account,account_fiscal_type:0
@@ -431,132 +760,438 @@ msgid "I39 - Servicios sujetos a Retención Personas Físicas"
 msgstr ""
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_cancel_line_id
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line_id
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_id
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line_id
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line_id
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__id
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_607__id
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_608__id
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_609__id
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__id
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_cancel_line__id
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line__id
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line__id
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line__id
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_summary__id
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_invoice_service_type_detail__id
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_606_line__id
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_607_line__id
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_608_line__id
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_609_line__id
 msgid "ID"
 msgstr ""
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line_identification_type
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line_identification_type
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_607_line__perceived_isr
+msgid "ISR Percibido"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_606_line__isr_perceived_in_purchases
+msgid "ISR Percibido en compras"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: selection:account.tax,purchase_tax_type:0
+msgid "ISR Retenido"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_supplier_form_inherited
+msgid "ISR Withholding Type"
+msgstr "Tipo De Retención ISR"
+
+#. module: l10n_do_ncf_oca_reports
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.dgii_report_form_view
+msgid "IT-1"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__itbis_total
+msgid "ITBIS Compras"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_606_line__billed_itbis
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_607_line__billed_itbis
+msgid "ITBIS Facturado"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: selection:account.tax,purchase_tax_type:0
+msgid "ITBIS Llevado al Costo"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__itbis_total_nc
+msgid "ITBIS Notas de crédito"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__itbis_total_payment
+msgid "ITBIS Pagado"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: selection:account.tax,purchase_tax_type:0
+msgid "ITBIS Pagado (Bienes)"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: selection:account.tax,purchase_tax_type:0
+msgid "ITBIS Pagado (Servicios)"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_607_line__perceived_itbis
+msgid "ITBIS Percibido"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: selection:account.tax,purchase_tax_type:0
+msgid "ITBIS Proporcionalidad"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: selection:account.tax,purchase_tax_type:0
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__ITBIS_RETENIDO
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_606_line__retained_itbis
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_607_line__retained_itbis
+msgid "ITBIS Retenido"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: selection:account.account,sale_tax_type:0
+msgid "ITBIS Retenido Persona Física (R 293-11)"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: selection:account.account,sale_tax_type:0
+msgid "ITBIS Retenido Persona Jurídica (N 02-05)"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: selection:account.account,sale_tax_type:0
+msgid "ITBIS Retenido a Proveedores Informales de Bienes (N 08-10)"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_606_line__itbis_taken_to_cost
+msgid "ITBIS Llevado Al Costo"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_606_line__itbis_perceived_in_purchases
+msgid "ITBIS Percibido en Compras"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_606_line__itbis_to_advance
+msgid "ITBIS por Adelantar"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_606_line__itbis_subject_to_proportionality
+msgid "ITBIS sujeto a Proporcionalidad (Art. 349)"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line__identification_type
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line__identification_type
 msgid "Identification Type"
-msgstr "Tipo Identificación"
+msgstr ""
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line_income_type
+#: model:ir.model.fields,help:l10n_do_ncf_oca_reports.field_dgii_report_606__message_unread
+#: model:ir.model.fields,help:l10n_do_ncf_oca_reports.field_dgii_reports__message_unread
+msgid "If checked new messages require your attention."
+msgstr "Si está marcado, hay nuevos mensajes que requieren su atención"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,help:l10n_do_ncf_oca_reports.field_dgii_report_606__message_needaction
+#: model:ir.model.fields,help:l10n_do_ncf_oca_reports.field_dgii_reports__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Si está marcado, hay nuevos mensajes que requieren su atención."
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,help:l10n_do_ncf_oca_reports.field_dgii_report_606__message_has_error
+#: model:ir.model.fields,help:l10n_do_ncf_oca_reports.field_dgii_reports__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si se encuentra marcado, algunos mensajes tienen error de envío."
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_606_line__exicise_tax
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_607_line__exicise_tax
+msgid "Impuesto Selectivo al Consumo"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: selection:account.tax,purchase_tax_type:0
+msgid "Impuesto Selectivo al Consumo (ISC)"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line__income_type
 msgid "Income Type"
-msgstr "Tipo de Ingreso"
+msgstr "Tipo De Ingreso"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_invoice_income_withholding
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line_income_withholding
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_income_withholding
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line_income_withholding
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_supplier_form_inherited
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_invoice__income_withholding
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__income_withholding
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line__income_withholding
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_supplier_form_inherited
 msgid "Income Withholding"
 msgstr "Retención Renta"
 
 #. module: l10n_do_ncf_oca_reports
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_form_inherited
+msgid "Income Withholding by a third"
+msgstr "Retención Renta"
+
+#. module: l10n_do_ncf_oca_reports
+#: selection:report.606.line,type_of_withholding_isr:0
+msgid "Intereses Pagados a Personas Físicas"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: selection:report.606.line,type_of_withholding_isr:0
+msgid "Intereses Pagados a Personas Jurídicas"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
 #: model:ir.model,name:l10n_do_ncf_oca_reports.model_account_invoice
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_cancel_line_invoice
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line_invoice
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_cancel_line__invoice_id
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line__invoice_id
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line__invoice_id
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line__invoice_id
 msgid "Invoice"
 msgstr "Factura"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_cancel_line_invoice_date
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line_invoice_date
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line_invoice_date
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line_invoice_date
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_cancel_line__invoice_date
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line__invoice_date
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line__invoice_date
 msgid "Invoice Date"
-msgstr "Fecha Factura"
+msgstr "Fecha factura"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line_invoice_partner_id
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line_invoice_partner_id
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_cancel_line_invoice_partner_id
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_cancel_line__invoice_partner_id
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line__invoice_partner_id
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line__invoice_partner_id
 msgid "Invoice Partner"
 msgstr "Contacto"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line_invoiced_amount
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line_invoiced_amount
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line_invoiced_amount
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line__invoiced_amount
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line__invoiced_amount
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line__invoiced_amount
 msgid "Invoiced Amount"
-msgstr "Total Monto Facturado"
+msgstr "Monto Factura"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_invoice_invoiced_itbis
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line_invoiced_itbis
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line_invoiced_itbis
-msgid "Invoiced Itbis"
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_form_inherited
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_supplier_form_inherited
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_invoice__invoiced_itbis
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line__invoiced_itbis
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line__invoiced_itbis
+msgid "Invoiced ITBIS"
 msgstr "ITBIS Facturado"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line_isr_withholding_date
-msgid "Isr Withholding Date"
-msgstr "Fecha Retención ISR"
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_supplier_form_inherited
+msgid "Invoicing"
+msgstr "Facturar"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_invoice_isr_withholding_type
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line_isr_withholding_type
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_606_line__is_credit_note
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_607_line__is_credit_note
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_608_line__is_credit_note
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_609_line__is_credit_note
+msgid "Is Credit Note"
+msgstr "Es Nota de Crédito"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_invoice__is_exterior
+msgid "Is Exterior"
+msgstr "Es Exterior"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__message_is_follower
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__message_is_follower
+msgid "Is Follower"
+msgstr "Es un seguidor"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line__isr_withholding_date
+msgid "ISR Withholding Date"
+msgstr "Retención ISR Fecha"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_invoice__isr_withholding_type
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line__isr_withholding_type
 msgid "Isr Withholding Type"
-msgstr "Tipo de Retención en ISR"
+msgstr "Tipo Retención ISR"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_cancel_line___last_update
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line___last_update
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports___last_update
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line___last_update
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line___last_update
-msgid "Last Modified on"
+#: selection:report.606.line,type_of_withholding_isr:0
+msgid "Juegos Telefónicos"
 msgstr ""
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_cancel_line_write_uid
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line_write_uid
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line_write_uid
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line_write_uid
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_write_uid
+#: model:ir.model.fields,help:l10n_do_ncf_oca_reports.field_report_606_line__voucher_date
+msgid "Keep empty to use the current date"
+msgstr "Dejarlo vacío para utilizar la fecha actual."
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606____last_update
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_607____last_update
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_608____last_update
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_609____last_update
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports____last_update
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_cancel_line____last_update
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line____last_update
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line____last_update
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line____last_update
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_summary____last_update
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_invoice_service_type_detail____last_update
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_606_line____last_update
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_607_line____last_update
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_608_line____last_update
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_609_line____last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__write_uid
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_607__write_uid
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_608__write_uid
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_609__write_uid
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__write_uid
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_cancel_line__write_uid
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line__write_uid
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line__write_uid
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line__write_uid
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_summary__write_uid
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_invoice_service_type_detail__write_uid
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_606_line__write_uid
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_607_line__write_uid
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_608_line__write_uid
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_609_line__write_uid
 msgid "Last Updated by"
-msgstr "Modificado por"
+msgstr "Última actualización por"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_cancel_line_write_date
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line_write_date
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line_write_date
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line_write_date
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_write_date
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__write_date
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_607__write_date
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_608__write_date
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_609__write_date
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__write_date
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_cancel_line__write_date
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line__write_date
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line__write_date
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line__write_date
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_summary__write_date
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_invoice_service_type_detail__write_date
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_606_line__write_date
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_607_line__write_date
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_608_line__write_date
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_609_line__write_date
 msgid "Last Updated on"
-msgstr "Modificado el"
+msgstr "Última actualización el"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line_legal_name
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__lea_income
+msgid "Lease Income"
+msgstr "Alquileres"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line__legal_name
 msgid "Legal Name"
-msgstr "Razón Social"
+msgstr "Nombre Legar"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_invoice_legal_tip
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line_legal_tip
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line_legal_tip
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_invoice__legal_tip
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line__legal_tip
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line__legal_tip
 msgid "Legal Tip"
 msgstr "Propina Legal"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_cancel_line_line
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line_line
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line_line
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line_line
-msgid "Line"
-msgstr "Línea"
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_form_inherited
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_supplier_form_inherited
+msgid "Legal tip amount"
+msgstr "Monto Propina Legal"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.dgii_report_form_view
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_cancel_line__line
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line__line
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line__line
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line__line
+msgid "Line"
+msgstr "Linea"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_606_line__line
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_607_line__line
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_608_line__line
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_609_line__line
+msgid "Linea"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.dgii_report_form_view
+msgid "Lineas del 606"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.dgii_report_form_view
+msgid "Lineas del 607"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.dgii_report_form_view
+msgid "Lineas del 608"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.dgii_report_form_view
+msgid "Lineas del 609"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model,name:l10n_do_ncf_oca_reports.model_report_607_line
+msgid "Lineas eportes de ventas DGII 607"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model,name:l10n_do_ncf_oca_reports.model_report_608_line
+msgid "Lineas eportes de ventas DGII 608"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model,name:l10n_do_ncf_oca_reports.model_report_609_line
+msgid "Lineas eportes de ventas DGII 609"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.dgii_report_form_view
 msgid "MM/YYYY"
 msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__message_main_attachment_id
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Adjuntos principales"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__message_has_error
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__message_has_error
+msgid "Message Delivery error"
+msgstr "Error de Envío de Mensaje"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__message_ids
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__message_ids
+msgid "Messages"
+msgstr "Mensajes"
 
 #. module: l10n_do_ncf_oca_reports
 #: selection:account.invoice,payment_form:0
@@ -564,10 +1199,77 @@ msgid "Mixed"
 msgstr "Mixto"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line_modified_invoice_number
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line_modified_invoice_number
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line__modified_invoice_number
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line__modified_invoice_number
 msgid "Modified Invoice Number"
-msgstr "NCF o Documento Modificado"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__month
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_607__month
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_608__month
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_609__month
+msgid "Month"
+msgstr "Mes"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_607_line__billed_amount
+msgid "Monto Facturado"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_606_line__amount_billed_in_goods
+msgid "Monto Facturado en Bienes"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_606_line__amount_billed_in_services
+msgid "Monto Facturado en Servicios"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__total_amount_nc
+msgid "Monto Notas decrédito"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: selection:account.tax,purchase_tax_type:0
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_606_line__legal_tip_amount
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_607_line__legal_tip_amount
+msgid "Monto Propina Legal"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_606_line__income_withholding_amount
+msgid "Monto Retención Renta"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__total_amount_billed
+msgid "Monto compra"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_606_line__invoice_id
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_606_line__ncf
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_607_line__invoice_id
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_607_line__ncf
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_608_line__invoice_id
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_609_line__invoice_id
+msgid "NCF"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_606_line__modified_ncf
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_607_line__modified_ncf
+msgid "NCF Modificado"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_summary__name
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_invoice_service_type_detail__name
+msgid "Name"
+msgstr "Nombre"
 
 #. module: l10n_do_ncf_oca_reports
 #: selection:dgii.reports,state:0
@@ -575,132 +1277,404 @@ msgid "New"
 msgstr "Nuevo"
 
 #. module: l10n_do_ncf_oca_reports
-#: selection:dgii.reports,state:0
-msgid "Generated"
-msgstr "Generado"
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Siguiente plazo de actividad"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_invoice_other_taxes
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line_other_taxes
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line_other_taxes
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__activity_summary
+msgid "Next Activity Summary"
+msgstr "Resumen de la siguiente actividad"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__activity_type_id
+msgid "Next Activity Type"
+msgstr "Siguiente tipo de actividad"
+
+#. module: l10n_do_ncf_oca_reports
+#: selection:account.account,sale_tax_type:0
+msgid "No Aplica"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: selection:account.tax,purchase_tax_type:0
+msgid "No Deducible"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: sql_constraint:dgii.reports:0
+msgid "No puede tener más de un reporte por periodo."
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: selection:res.partner,related:0
+msgid "Not Related"
+msgstr "No Relacionada"
+
+#. module: l10n_do_ncf_oca_reports
+#: selection:account.invoice,fiscal_status:0
+msgid "Not Sent"
+msgstr "No enviada"
+
+#. module: l10n_do_ncf_oca_reports
+#: selection:dgii.report.606,state:0
+#: selection:dgii.report.607,state:0
+#: selection:dgii.report.608,state:0
+#: selection:dgii.report.609,state:0
+msgid "Nuevo"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__message_needaction_counter
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número de acciones"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__message_has_error_counter
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__message_has_error_counter
+msgid "Number of error"
+msgstr "Número de error"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,help:l10n_do_ncf_oca_reports.field_dgii_report_606__message_needaction_counter
+#: model:ir.model.fields,help:l10n_do_ncf_oca_reports.field_dgii_reports__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Número de mensajes que requieren una acción"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,help:l10n_do_ncf_oca_reports.field_dgii_report_606__message_has_error_counter
+#: model:ir.model.fields,help:l10n_do_ncf_oca_reports.field_dgii_reports__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensajes con error de envío"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,help:l10n_do_ncf_oca_reports.field_dgii_report_606__message_unread_counter
+#: model:ir.model.fields,help:l10n_do_ncf_oca_reports.field_dgii_reports__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Número de mensajes no leidos"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,help:l10n_do_ncf_oca_reports.field_report_606_line__type_of_withholding_isr
+msgid "Observacion"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__opr_income
+msgid "Operations Income (No-Financial)"
+msgstr "Ingresos por Operaciones (No Financieros)"
+
+#. module: l10n_do_ncf_oca_reports
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.dgii_report_form_view
+msgid "Operations Total"
+msgstr "Total De Operaciones"
+
+#. module: l10n_do_ncf_oca_reports
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.dgii_report_form_view
+msgid "Operations by Income Type"
+msgstr "Operaaciones por Tipo de Ingreso"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__ncf_sale_summary_ids
+msgid "Operations by NCF type"
+msgstr "Operaciones por Tipo de NCF"
+
+#. module: l10n_do_ncf_oca_reports
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.dgii_report_form_view
+msgid "Operations by Sale Type"
+msgstr "Operaciones por Tipo de Venta"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__others
+msgid "Other Sale Forms"
+msgstr "Otras Formas de Venta"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_invoice__other_taxes
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line__other_taxes
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line__other_taxes
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_form_inherited
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_supplier_form_inherited
 msgid "Other Taxes"
 msgstr "Otros Impuestos"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line_others
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line__others
 msgid "Others"
-msgstr "Otras Formas de Ventas"
+msgstr "Otros"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_invoice_payment_date
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line_payment_date
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line_payment_date
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_supplier_form_inherited
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__otr_income
+msgid "Others Income"
+msgstr "Otros Ingresos"
+
+#. module: l10n_do_ncf_oca_reports
+#: selection:report.606.line,type_of_withholding_isr:0
+msgid "Otras Rentas"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_606_line__other_tax_fees
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_607_line__other_tip_fees
+msgid "Otros Impuesto/Tasas"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: selection:dgii.report.606,activity_state:0
+msgid "Overdue"
+msgstr "Vencimiento"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_invoice_service_type_detail__parent_code
+msgid "Parent Code"
+msgstr "Código de Empresa"
+
+#. module: l10n_do_ncf_oca_reports
+#: selection:account.invoice,fiscal_status:0
+msgid "Partial"
+msgstr "Parcial"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_invoice__payment_date
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line__payment_date
 msgid "Payment Date"
+msgstr "Fecha de pago"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_invoice__payment_form
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_supplier_form_inherited
+msgid "Payment Form"
+msgstr "Forma de Pago"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line__payment_type
+msgid "Payment Type"
+msgstr "Tipo de pago"
+
+#. module: l10n_do_ncf_oca_reports
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_supplier_form_inherited
+msgid "Payment date"
 msgstr "Fecha de Pago"
 
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_invoice_payment_form
-msgid "Payment Form"
-msgstr "Forma De Pago"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line_payment_type
-msgid "Payment Type"
-msgstr "Forma De Pago"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line_perceived_isr
-msgid "Perceived Isr"
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line__perceived_isr
+msgid "Perceived ISR"
 msgstr "ISR Percibido"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line_perceived_itbis
-msgid "Perceived Itbis"
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line__perceived_itbis
+msgid "Perceived ITBIS"
 msgstr "ITBIS Percibido"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_name
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__name
 msgid "Period"
-msgstr "Periodo"
+msgstr "Período"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line_presumed_income
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_presumed_income
+#: selection:dgii.report.606,activity_state:0
+msgid "Planned"
+msgstr "Planificado"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__presumed_income
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line__presumed_income
 msgid "Presumed Income"
 msgstr "Renta Presunta"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_previous_balance
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__previous_balance
 msgid "Previous balance"
 msgstr "Balance Anterior"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_invoice_proportionality_tax
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line_proportionality_tax
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_supplier_form_inherited
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_invoice__proportionality_tax
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__proportionality_tax
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line__proportionality_tax
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_supplier_form_inherited
 msgid "Proportionality Tax"
 msgstr "ITBIS Sujeto a Proporcionalidad"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_filename
-msgid "Purchase Filename"
-msgstr "Compra Archivo"
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__purchase_ids
+msgid "Purchase"
+msgstr "Compra"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_invoiced_amount
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__purchase_filename
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__purchase_filename
+msgid "Purchase Filename"
+msgstr "Archivo de Compra"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__purchase_filename_xlsx
+msgid "Purchase Filename Xlsx"
+msgstr "Archivo de Compra Xlsx"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__purchase_invoiced_amount
 msgid "Purchase Invoiced Amount"
 msgstr "Total Monto Facturado"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_invoiced_itbis
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__purchase_invoiced_itbis
 msgid "Purchase Invoiced Itbis"
 msgstr "ITBIS Facturado"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_legal_tip
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__purchase_legal_tip
 msgid "Purchase Legal Tip"
-msgstr "Propina Legal"
+msgstr "Propina Legar"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_other_taxes
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__purchase_other_taxes
 msgid "Purchase Other Taxes"
 msgstr "Otros Impuestos"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line_purchase_perceived_isr
-msgid "Purchase Perceived Isr"
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line__purchase_perceived_isr
+msgid "Purchase Perceived ISR"
 msgstr "ISR Percibido"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line_purchase_perceived_itbis
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line__purchase_perceived_itbis
 msgid "Purchase Perceived Itbis"
 msgstr "ITBIS Percibido"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_records
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__purchase_records
 msgid "Purchase Records"
 msgstr "Registros"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_selective_tax
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__purchase_selective_tax
 msgid "Purchase Selective Tax"
 msgstr "Selectivo al Consumo"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_withholded_itbis
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__purchase_withholded_itbis
 msgid "Purchase Withholded Itbis"
 msgstr "ITBIS Retenido"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line_purchased_service_type
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line__purchased_service_type
 msgid "Purchased Service Type"
-msgstr "Tipo servicios adquirido"
+msgstr "Tipo Servicios Adquirido"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line_related_part
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_summary__qty
+msgid "Qty"
+msgstr "Cantidad"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__rnc_or_schedule
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_607__rnc_or_schedule
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_608__rnc_or_schedule
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_609__rnc_or_schedule
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_606_line__rnc_or_schedule
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_607_line__rnc_or_schedule
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_608_line__rnc_or_schedule
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_609_line__rnc_or_schedule
+msgid "RNC"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.actions.server,name:l10n_do_ncf_oca_reports.action_run_norma_recompute
+msgid "Recalcular norma 07-2018"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,help:l10n_do_ncf_oca_reports.field_report_606_line__modified_ncf
+msgid "Reference of the document that produced this invoice."
+msgstr "Referencia del documento que ha creado esta factura."
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__name
+msgid "Referencia"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_res_partner__related
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_res_users__related
+#: selection:res.partner,related:0
+msgid "Related"
+msgstr "Relacionada"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line__related_part
 msgid "Related Part"
 msgstr "Parte Relacionada"
+
+#. module: l10n_do_ncf_oca_reports
+#: selection:account.tax,purchase_tax_type:0
+msgid "Remesas al Exterior (Ley 253-12)"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: selection:report.606.line,type_of_withholding_isr:0
+msgid "Rentas Presuntas"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__report_606_line
+msgid "Report 606 Line"
+msgstr "Línea Reporte 606"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_607__report_607_line
+msgid "Report 607 Line"
+msgstr "Línea Reporte 607"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_608__report_608_line
+msgid "Línea Reporte 608"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_609__report_609_line
+msgid "Línea Reporte 609"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model,name:l10n_do_ncf_oca_reports.model_dgii_report_608
+msgid "Reporte de cancelacion 608 para la DGII"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model,name:l10n_do_ncf_oca_reports.model_report_606_line
+msgid "Reporte de compras DGII 606"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model,name:l10n_do_ncf_oca_reports.model_dgii_report_607
+msgid "Reporte de ventas DGII 607"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model,name:l10n_do_ncf_oca_reports.model_dgii_report_609
+msgid "Reporte de ventas DGII 609"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: selection:account.invoice,fiscal_status:0
+msgid "Reported"
+msgstr "Reportada"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__activity_user_id
+msgid "Responsible User"
+msgstr "Usuario responsable"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__RETENCION_RENTA
+msgid "Retención Renta"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_607_line__withholding_income_by_third_parties
+msgid "Retención Renta por Terceros"
+msgstr ""
 
 #. module: l10n_do_ncf_oca_reports
 #: selection:account.account,account_fiscal_type:0
@@ -708,117 +1682,79 @@ msgid "Retención de Renta por Terceros"
 msgstr "Retención Renta"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line_rnc_cedula
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line_rnc_cedula
-msgid "Rnc Cedula"
-msgstr "RNC o Cédula"
+#: selection:report.606.line,type_of_withholding_isr:0
+msgid "Retención por Proveedores del Estado"
+msgstr ""
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_filename
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line__rnc_cedula
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line__rnc_cedula
+msgid "RNC/Cedula"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__sale_ids
+msgid "Sale"
+msgstr "Venta"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__sale_filename
 msgid "Sale Filename"
-msgstr "Venta Archivo"
+msgstr "Archivo de Venta"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_invoiced_amount
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__sale_filename_xlsx
+msgid "Sale Filename Xlsx"
+msgstr "Archivo de Venta Xlsx"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__sale_invoiced_amount
 msgid "Sale Invoiced Amount"
 msgstr "Total Monto Facturado"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_invoiced_itbis
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__sale_invoiced_itbis
 msgid "Sale Invoiced Itbis"
 msgstr "ITBIS Facturado"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_legal_tip
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__sale_legal_tip
 msgid "Sale Legal Tip"
 msgstr "Propina Legal"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_other_taxes
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__sale_other_taxes
 msgid "Sale Other Taxes"
-msgstr "Otros Impuestos/Tasas"
+msgstr "Otros Impuestos"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_records
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__sale_records
 msgid "Sale Records"
 msgstr "Registros"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_selective_tax
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__sale_selective_tax
 msgid "Sale Selective Tax"
-msgstr "Impuesto Selectivo al Consumo"
+msgstr "Impuesto Selectivo Al Consumo"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_withholded_isr
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__sale_withholded_isr
 msgid "Sale Withholded Isr"
-msgstr "Retención Renta"
+msgstr "ISR Retenido"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_withholded_itbis
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__sale_withholded_itbis
 msgid "Sale Withholded Itbis"
 msgstr "ITBIS Retenido"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_invoice_selective_tax
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line_selective_tax
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line_selective_tax
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_form_inherited
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_supplier_form_inherited
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_invoice__selective_tax
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line__selective_tax
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line__selective_tax
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_form_inherited
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_supplier_form_inherited
 msgid "Selective Tax"
 msgstr "Selectivo al Consumo"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_invoice_service_total_amount
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line_service_total_amount
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_service_total_amount
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_supplier_form_inherited
-msgid "Service Total Amount"
-msgstr "Facturado en Servicios"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line_service_type_detail
-msgid "Service Type Detail"
-msgstr "Detalles del Servicio Adquirido"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_state
-msgid "State"
-msgstr "Estado"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.dgii_report_form_view
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.dgii_report_search_view
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.dgii_report_tree_view
-msgid "Statements"
-msgstr "Reportes"
-
-#. module: l10n_do_ncf_oca_reports
-#: selection:account.invoice,payment_form:0
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line_swap
-msgid "Swap"
-msgstr "Permuta"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line_tax_id
-msgid "Tax"
-msgstr "Id Tributaria"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line_tax_id_type
-msgid "Tax Id Type"
-msgstr "Tipo Id Tributaria"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_invoice_third_income_withholding
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line_third_income_withholding
-msgid "Third Income Withholding"
-msgstr "Retención Renta"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_invoice_third_withheld_itbis
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line_third_withheld_itbis
-msgid "Third Withheld Itbis"
-msgstr "ITBIS Retenido"
 
 #. module: l10n_do_ncf_oca_reports
 #: selection:dgii.reports,state:0
@@ -826,54 +1762,282 @@ msgid "Sent"
 msgstr "Enviado"
 
 #. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_summary__sequence
+msgid "Sequence"
+msgstr "Secuencia"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_invoice__service_total_amount
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__service_total_amount
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line__service_total_amount
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_supplier_form_inherited
+msgid "Service Total Amount"
+msgstr "Facturado en Servicio "
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_invoice__service_type
+msgid "Service Type"
+msgstr "Tipo de Servicio"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_invoice__service_type_detail
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line__service_type_detail
+msgid "Service Type Detail"
+msgstr "Detalle Tipo de Servicio"
+
+#. module: l10n_do_ncf_oca_reports
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.dgii_report_form_view
+msgid "Set as sent"
+msgstr "Marcado Como Enviado"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_607__state
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_608__state
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_609__state
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__state
+msgid "State"
+msgstr "Estado"
+
+#. module: l10n_do_ncf_oca_reports
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.dgii_report_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.dgii_report_search_view
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.dgii_report_tree_view
+msgid "Statements"
+msgstr "Extractos"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,help:l10n_do_ncf_oca_reports.field_dgii_report_606__activity_state
+msgid "Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr "Estado basado en actividades\n"
+"Vencida: la fecha tope ya ha pasado\n"
+"Hoy: La fecha tope es hoy\n"
+"Planificada: futuras actividades."
+
+#. module: l10n_do_ncf_oca_reports
+#: selection:account.invoice,payment_form:0
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__swap
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line__swap
+msgid "Swap"
+msgstr "Permuta"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_607_line__debit_credit_card
+msgid "Tarjeta Débito/Crédito"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model,name:l10n_do_ncf_oca_reports.model_account_tax
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line__tax_id
+msgid "Tax"
+msgstr "Impuesto"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line__tax_id_type
+msgid "Tax Id Type"
+msgstr "Tipo Id Tributaria"
+
+#. module: l10n_do_ncf_oca_reports
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_form_inherited
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_supplier_form_inherited
+msgid "Taxes"
+msgstr "Impuestos"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,help:l10n_do_ncf_oca_reports.field_dgii_report_606__rnc_or_schedule
+#: model:ir.model.fields,help:l10n_do_ncf_oca_reports.field_dgii_report_607__rnc_or_schedule
+#: model:ir.model.fields,help:l10n_do_ncf_oca_reports.field_dgii_report_608__rnc_or_schedule
+#: model:ir.model.fields,help:l10n_do_ncf_oca_reports.field_dgii_report_609__rnc_or_schedule
+#: model:ir.model.fields,help:l10n_do_ncf_oca_reports.field_report_606_line__rnc_or_schedule
+#: model:ir.model.fields,help:l10n_do_ncf_oca_reports.field_report_607_line__rnc_or_schedule
+#: model:ir.model.fields,help:l10n_do_ncf_oca_reports.field_report_608_line__rnc_or_schedule
+#: model:ir.model.fields,help:l10n_do_ncf_oca_reports.field_report_609_line__rnc_or_schedule
+msgid "The Tax Identification Number. Complete it if the contact is subjected to government taxes. Used in some legal statements."
+msgstr "
+El número de identificación fiscal. Complételo si el contacto está sujeto a los impuestos del gobierno. Utilizado en algunas declaraciones legales."
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_invoice__third_income_withholding
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line__third_income_withholding
+msgid "Third Income Withholding"
+msgstr "Retención Renta"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_invoice__third_withheld_itbis
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line__third_withheld_itbis
+msgid "Third Withheld Itbis"
+msgstr "ITBIS Retenido"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_606_line__identification_type
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_607_line__identification_type
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_608_line__identification_type
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_609_line__identification_type
+msgid "Tipo ID"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_606_line__type_purchased_goods_and_services
+msgid "Tipo de Costos y Gastos"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_tax__purchase_tax_type
+msgid "Tipo de Impuesto en Compra"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_account__sale_tax_type
+msgid "Tipo de Impuesto en Venta"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_606_line__type_of_withholding_isr
+msgid "Tipo de Retención en ISR"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: selection:dgii.report.606,activity_state:0
+msgid "Today"
+msgstr "Hoy"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__income_type_total
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__sale_type_total
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.dgii_exterior_report_line_tree
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.dgii_report_purchase_line_tree
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.dgii_report_sale_line_tree
+msgid "Total"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_606_line__total_charged
+msgid "Total Monto Facturado"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__TOTAL_MONTO_PAYMENT
+msgid "Totalmonto facturado"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__message_unread
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__message_unread
+msgid "Unread Messages"
+msgstr "Mensajes por leer"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__message_unread_counter
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Contador de mensajes sin leer"
+
+#. module: l10n_do_ncf_oca_reports
+#: selection:dgii.report.606,state:0
+#: selection:dgii.report.607,state:0
+#: selection:dgii.report.608,state:0
+#: selection:dgii.report.609,state:0
+msgid "Valido"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,help:l10n_do_ncf_oca_reports.field_report_606_line__itbis_taken_to_cost
+msgid "Valor del ITBIS que no se deduce por concepto de adelanto en el Formulario de IT-1."
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__website_message_ids
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports__website_message_ids
+msgid "Website Messages"
+msgstr "Mensajes del sitio web"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,help:l10n_do_ncf_oca_reports.field_dgii_report_606__website_message_ids
+#: model:ir.model.fields,help:l10n_do_ncf_oca_reports.field_dgii_reports__website_message_ids
+msgid "Website communication history"
+msgstr "Historial de comunicaciones del sitio web"
+
+#. module: l10n_do_ncf_oca_reports
 #: selection:dgii.reports,state:0
 msgid "With error"
 msgstr "Con Errores"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line_withholded_isr
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_supplier_form_inherited
+msgid "Withheld ITBIS"
+msgstr "ITBIS Retenido"
+
+#. module: l10n_do_ncf_oca_reports
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_form_inherited
+msgid "Withheld ITBIS by a third"
+msgstr "ITBIS Retenido"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line__withholded_isr
 msgid "Withholded Isr"
 msgstr "ISR Retenido"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_invoice_withholded_itbis
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line_withholded_itbis
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_invoice__withholded_itbis
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line__withholded_itbis
 msgid "Withholded Itbis"
 msgstr "ITBIS Retenido"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line_withholding_date
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_form_inherited
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_supplier_form_inherited
+msgid "Withholding"
+msgstr "Retención"
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line__withholding_date
 msgid "Withholding Date"
+msgstr "Fecha De Retención"
+
+#. module: l10n_do_ncf_oca_reports
+#: model_terms:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_form_inherited
+msgid "Withholding date"
 msgstr "Fecha de Retención"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.actions.act_window,help:l10n_do_ncf_oca_reports.dgii_report_action
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_606__year
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_607__year
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_608__year
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_report_609__year
+msgid "Year"
+msgstr "Año"
+
+#. module: l10n_do_ncf_oca_reports
+#: model_terms:ir.actions.act_window,help:l10n_do_ncf_oca_reports.dgii_report_action
 msgid "You can create your DGII Tax Statements here."
-msgstr "Puedes Crear Tus Declaraciones de la DGII aquí"
+msgstr "Puedes Crear Tus Reportes de la DGII aquí"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model,name:l10n_do_ncf_oca_reports.model_account_invoice_payment
-msgid "account.invoice.payment"
-msgstr ""
+#: code:addons/l10n_do_ncf_oca_reports/models/dgii_report.py:69
+#, python-format
+msgid "You cannot have more than one report by period."
+msgstr "No puedes Tener más de un Reporte por Periodo"
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model,name:l10n_do_ncf_oca_reports.model_account_invoice_payments
-msgid "account.invoice.payments"
-msgstr ""
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.model,name:l10n_do_ncf_oca_reports.model_dgii_reports_cancel_line
-msgid "dgii.cancel.report.line"
-msgstr ""
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.model,name:l10n_do_ncf_oca_reports.model_dgii_reports_exterior_line
-msgid "dgii.exterior.report.line"
+#: model:ir.model,name:l10n_do_ncf_oca_reports.model_dgii_report_606
+msgid "dgii.report.606"
 msgstr ""
 
 #. module: l10n_do_ncf_oca_reports
 #: model:ir.model,name:l10n_do_ncf_oca_reports.model_dgii_reports
 msgid "dgii.reports"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model,name:l10n_do_ncf_oca_reports.model_dgii_reports_cancel_line
+msgid "dgii.reports.cancel.line"
+msgstr ""
+
+#. module: l10n_do_ncf_oca_reports
+#: model:ir.model,name:l10n_do_ncf_oca_reports.model_dgii_reports_exterior_line
+msgid "dgii.reports.exterior.line"
 msgstr ""
 
 #. module: l10n_do_ncf_oca_reports
@@ -887,264 +2051,16 @@ msgid "dgii.reports.sale.line"
 msgstr ""
 
 #. module: l10n_do_ncf_oca_reports
-#: selection:res.partner,related:0
-msgid "Not Related"
-msgstr "No Relacionada"
+#: model:ir.model,name:l10n_do_ncf_oca_reports.model_dgii_reports_sale_summary
+msgid "dgii.reports.sale.summary"
+msgstr ""
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_res_partner_related
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_res_users_related
-#: selection:res.partner,related:0
-msgid "Related"
-msgstr "Relacionada"
+#: model:ir.model,name:l10n_do_ncf_oca_reports.model_invoice_service_type_detail
+msgid "invoice.service.type.detail"
+msgstr ""
 
 #. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line_purchased_service_type
-msgid "Purchased Service Type"
-msgstr "Tipo de Servicio"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_invoice_service_type
-msgid "Service Type"
-msgstr "Tipo de Servicio"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_invoice_service_type_detail
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_exterior_line_service_type_detail
-msgid "Service Type Detail"
-msgstr "Detalle del Servicio"
-
-#. module: l10n_do_ncf_oca_reports
-#: sql_constraint:invoice.service.type.detail:0
-msgid "Code must be unique"
-msgstr "El código debe ser único"
-
-#. module: l10n_do_ncf_oca_reports
-#: code:ncf_dgii_reports/models/account_invoice.py:32
-#, python-format
-msgid ""
-"An invoice cannot have multiple withholding taxes."
-msgstr "Una Factura No Puede Tener Múltiples Retenciones de ISR"
-
-#. module: l10n_do_ncf_oca_reports
-#: code:ncf_dgii_reports/models/dgii_report.py:111
-#, python-format
-msgid ""
-"Error. Date format must be MM/YYYY"
-msgstr "Error. El Formato De Fecha Debe Ser MM/AAAA"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_invoice_fiscal_status
-msgid "Fiscal Status"
-msgstr "Estado Fiscal"
-
-#. module: l10n_do_ncf_oca_reports
-#: selection:account.invoice,fiscal_status:0
-msgid "Reported"
-msgstr "Reportada"
-
-#. module: l10n_do_ncf_oca_reports
-#: selection:account.invoice,fiscal_status:0
-msgid "Partial"
-msgstr "Parcial"
-
-#. module: l10n_do_ncf_oca_reports
-#: selection:account.invoice,fiscal_status:0
-msgid "Not Sent"
-msgstr "No enviada"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.actions.act_window,name:l10n_do_ncf_oca_reports.dgii_report_action
-#: model:ir.ui.menu,name:l10n_do_ncf_oca_reports.dgii_report_menu
-msgid "Reports"
-msgstr "Reportes"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_form_inherited
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_supplier_form_inherited
-msgid "Withholding"
-msgstr "Retenciones"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_form_inherited
-msgid "Withholding date"
-msgstr "Fecha de Retención"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_form_inherited
-msgid "Withheld ITBIS by a third"
-msgstr "ITBIS Retenido"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_form_inherited
-msgid "Income Withholding by a third"
-msgstr "Retención Renta"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_form_inherited
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_supplier_form_inherited
-msgid "Taxes"
-msgstr "Impuestos"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_form_inherited
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_supplier_form_inherited
-msgid "Invoiced ITBIS"
-msgstr "ITBIS Facturado"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_form_inherited
-msgid "Other taxes"
-msgstr "Otros Impuestos"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_form_inherited
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_supplier_form_inherited
-msgid "Legal tip amount"
-msgstr "Propina Legal"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_supplier_form_inherited
-msgid "Advanced ITBIS"
-msgstr "ITBIS por Adelantar"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_supplier_form_inherited
-msgid "Other taxes"
-msgstr "Otros Impuestos"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_supplier_form_inherited
-msgid "Payment form"
-msgstr "Forma de Pago"
-
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_supplier_form_inherited
-msgid "Withheld ITBIS"
-msgstr "ITBIS Retenido"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_supplier_form_inherited
-msgid "ISR Withholding Type"
-msgstr "Tipo de Retención ISR"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.invoice_supplier_form_inherited
-msgid "Invoicing"
-msgstr "Facturación"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.dgii_report_form_view
-msgid "607 Reported Operations by NCF Type"
-msgstr "Operaciones Reportadas en el 607 por Tipo de NCF"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_summary_name
-msgid "Name"
-msgstr "Tipo de NCF"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_summary_qty
-msgid "Qty"
-msgstr "Cantidad"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_summary_amount
-msgid "Amount"
-msgstr "Monto"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.dgii_report_form_view
-msgid "Operations Total"
-msgstr "Total Operaciones"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_ncf_sale_summary_ids
-msgid "Operations by NCF type"
-msgstr "Operaciones por Tipo de NCF"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.dgii_report_form_view
-msgid "Operations by Sale Type"
-msgstr "Operaciones por Tipo de Venta"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_cash
-msgid "Cash"
-msgstr "Efectivo"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_bank
-msgid "Check / Transfer / Deposit"
-msgstr "Cheque / Transferencia"
-
-#. module: l10n_do_ncf_oca_reports
-#: selection:account.invoice,payment_form:0
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_card
-msgid "Credit Card / Debit Card"
-msgstr "Tarjeta Débito / Crédito"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_credit
-msgid "Credit"
-msgstr "A Crédito"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_bond
-msgid "Gift certificates or vouchers"
-msgstr "Bonos o Certificados de Regalo"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_swap
-msgid "Swap"
-msgstr "Permutas"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_others
-msgid "Other Sale Forms"
-msgstr "Otras Formas de Venta"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_opr_income
-msgid "Operations Income (No-Financial)"
-msgstr "Ingresos por Operaciones (No Financieros)"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_ext_income
-msgid "Extraordinary Income"
-msgstr "Ingresos Extraordinarios"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_fin_income
-msgid "Financial Income"
-msgstr "Ingresos Financieros"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_lea_income
-msgid "Lease Income"
-msgstr "Ingresos por Arrendamientos"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_ast_income
-msgid "Depreciable Assets Income"
-msgstr "Ingresos por Venta de Activos Depreciables"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_otr_income
-msgid "Others Income"
-msgstr "Otros Ingresos"
-
-#. module: l10n_do_ncf_oca_reports
-#: model:ir.ui.view,arch_db:l10n_do_ncf_oca_reports.dgii_report_form_view
-msgid "Operations by Income Type"
-msgstr "Operaciones por Tipo de Ingreso"
-
-#. module: l10n_do_ncf_oca_reports
-#: code:addons/ncf_dgii_reports/models/dgii_report.py:39
-#: sql_constraint:dgii.reports:0
-#, python-format
-msgid "You cannot have more than one report by period."
-msgstr "No puede tener más de un reporte por periodo."
-
-#: model:ir.ui.menu,name:l10n_do_ncf_oca_reports.dgii_report_parent_menu
-msgid "Data Sending"
-msgstr "Envío de datos"
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_report_607_line__type_of_income
+msgid "tipo de Ingreso"
+msgstr ""
