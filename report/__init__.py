@@ -2,7 +2,7 @@
 # © 2015-2018 Marcos Organizador de Negocios SRL. (https://marcos.do/)
 
 #             Eneldo Serrata <eneldo@marcos.do>
-# © 2018 SoftNet Team SRL. (https://www.softnet.do/)
+# © 2018-2019 SoftNet Team SRL. (https://www.softnet.do/)
 #             Manuel Gonzalez <manuel@softnet.do>
 
 # © 2018 Jeffry Jesus De La Rosa <jeffryjesus@gmail.com>
