@@ -84,3 +84,8 @@
 .bs-callout-info h2 {
     color: #5bc0de;
 }
+
+.o_form_view .o_field_widget .o_list_view > tfoot > tr > td { 
+    color: #fff !important;
+    background: #008DCA !important;
+    font-weight: 600 !important  }
