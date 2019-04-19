@@ -1,4 +1,4 @@
-odoo.define('ncf_dgii_reports.widgets', function (require) {
+odoo.define('l10n_do_ncf_oca_reports.widgets', function (require) {
     "use strict";
 
     var form_common = require('web.form_common');
