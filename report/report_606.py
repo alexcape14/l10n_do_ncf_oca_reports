@@ -39,7 +39,7 @@ _logger = logging.getLogger(__name__)
 
 
 class DgiiReport606(models.Model):
-    _name = 'dgii.report.606'
+    _name = 'dgii.report.606' #TODO ask to Jeffrey about this model.
     _inherit = ['mail.thread', 'mail.activity.mixin']
 
     name = fields.Char("Referencia")
@@ -278,7 +278,7 @@ class DgiiReport606(models.Model):
 
 class Report606Line(models.Model):
     _name = 'report.606.line'
-    _description = "Reporte de compras DGII 606"
+    _description = 'Reporte de compras DGII 606' #TODO ask to Jeffrey about this model.
 
     line = fields.Integer("Linea")
     dgii_report_606_id = fields.Many2one("dgii.report.606")

@@ -40,6 +40,7 @@ from odoo.exceptions import ValidationError
 
 class DgiiReportSaleSummary(models.Model):
     _name = 'dgii.reports.sale.summary'
+    _description = 'DGII Report Sales Summary'
     _order = 'sequence'
 
     name = fields.Char()
@@ -53,6 +54,7 @@ class DgiiReportSaleSummary(models.Model):
 
 class DgiiReport(models.Model):
     _name = 'dgii.reports'
+    _description = 'DGII Report'
     _inherit = ['mail.thread']
 
     name = fields.Char(string='Period', required=True, size=7)
@@ -350,6 +352,9 @@ class DgiiReport(models.Model):
     def _generate_606_txt(self, report, records, qty):
 
         company_vat = report.company_id.vat
+
+        _logger.warning("company_vat:: %s" % (company_vat))
+
         period = dt.strptime(report.name.replace('/', ''), '%m%Y').strftime('%Y%m')
 
         header = "606|{}|{}|{}".format(str(company_vat).ljust(11), period, qty) + '\n'
@@ -652,9 +657,6 @@ class DgiiReport(models.Model):
                                     rec.lea_income + rec.ast_income + rec.otr_income
 
     def process_607_report_data(self, values):
-
-        # _logger.warning("withholding_date:: %s, invoice_date:: %s" %
-        #  (values['withholding_date'], values['invoice_date']))
 
         pipe = '|'
 
@@ -1223,6 +1225,7 @@ class DgiiReport(models.Model):
 
 class DgiiReportPurchaseLine(models.Model):
     _name = 'dgii.reports.purchase.line'
+    _description = 'DGII Report Purchase Line'
     _order = 'line asc'
 
     dgii_report_id = fields.Many2one('dgii.reports', ondelete='cascade')
@@ -1259,6 +1262,7 @@ class DgiiReportPurchaseLine(models.Model):
 
 class DgiiReportSaleLine(models.Model):
     _name = 'dgii.reports.sale.line'
+    _description = 'DGII Report Sale Line'
 
     dgii_report_id = fields.Many2one('dgii.reports', ondelete='cascade')
     line = fields.Integer()
@@ -1296,6 +1300,7 @@ class DgiiReportSaleLine(models.Model):
 
 class DgiiCancelReportLine(models.Model):
     _name = 'dgii.reports.cancel.line'
+    _description = 'DGII Cancel Report Line'
 
     dgii_report_id = fields.Many2one('dgii.reports', ondelete='cascade')
     line = fields.Integer()
@@ -1310,6 +1315,7 @@ class DgiiCancelReportLine(models.Model):
 
 class DgiiExteriorReportLine(models.Model):
     _name = 'dgii.reports.exterior.line'
+    _description = 'DGII Exterior Report Line'
 
     dgii_report_id = fields.Many2one('dgii.reports', ondelete='cascade')
     line = fields.Integer()

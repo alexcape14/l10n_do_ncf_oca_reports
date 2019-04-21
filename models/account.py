@@ -107,6 +107,7 @@ class AccountAccount(models.Model):
 
 class InvoiceServiceTypeDetail(models.Model):
     _name = 'invoice.service.type.detail'
+    _description = 'Invoice Service Type'
 
     name = fields.Char()
     code = fields.Char(size=2)

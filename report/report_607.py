@@ -35,7 +35,7 @@ _logger = logging.getLogger(__name__)
 
 class DgiiReport607(models.Model):
     _name = 'dgii.report.607'
-    _description = "Reporte de ventas DGII 607"
+    _description = "Reporte de ventas DGII 607" #TODO ask to Jeffrey about this model.
 
     company_id = fields.Many2one(
             comodel_name='res.company',
@@ -61,7 +61,7 @@ class DgiiReport607(models.Model):
     @api.multi
     @api.depends('report_607_line')
     def _compute_count_register(self):
-        _logger.info("compute count register 607")
+        # _logger.info("compute count register 607")
         for rec in self:
             rec.count_register = rec.report_607_line and \
                     len(rec.report_607_line)
@@ -69,7 +69,7 @@ class DgiiReport607(models.Model):
 
 class Report607Line(models.Model):
     _name = 'report.607.line'
-    _description = "Lineas eportes de ventas DGII 607"
+    _description = "Lineas reportes de ventas DGII 607" #TODO ask to Jeffrey about this model.
 
     line = fields.Integer("Linea")
     dgii_report_607_id = fields.Many2one('dgii.report.607')
