@@ -89,3 +89,23 @@
     color: #fff !important;
     background: #008DCA !important;
     font-weight: 600 !important  }
+
+a[name=purchase_binary], 
+a[name=purchase_binary_xlsx], 
+a[name=sale_binary], 
+a[name=sale_binary_xlsx], 
+a[name=cancel_binary], 
+a[name=cancel_binary_xlsx], 
+a[name=exterior_binary], 
+a[name=exterior_binary_xlsx] 
+{ color: #fff !important; }
+
+a[name=purchase_binary] span, 
+a[name=purchase_binary_xlsx] span, 
+a[name=sale_binary] span, 
+a[name=sale_binary_xlsx] span, 
+a[name=cancel_binary] span, 
+a[name=cancel_binary_xlsx] span,
+a[name=exterior_binary] span,
+a[name=exterior_binary_xlsx] span
+{ color: #333; }

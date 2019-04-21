@@ -353,14 +353,12 @@ class DgiiReport(models.Model):
 
         company_vat = report.company_id.vat
 
-        _logger.warning("company_vat:: %s" % (company_vat))
-
-        period = dt.strptime(report.name.replace('/', ''), '%m%Y').strftime('%Y%m')
+        period = dt.strptime(report.name.replace('/', ''), '%m%Y').strftime('%Y%m')        
 
         header = "606|{}|{}|{}".format(str(company_vat).ljust(11), period, qty) + '\n'
         data = header + records
 
-        file_path = '/tmp/DGII_606_{}_{}.txt'.format(company_vat, period)
+        file_path = '/tmp/DGII_F_606_{}_{}.TXT'.format(company_vat, period)
         with open(file_path, 'w', encoding="utf-8", newline='\r\n') as txt_606:
             txt_606.write(str(data))
 
@@ -684,9 +682,6 @@ class DgiiReport(models.Model):
         BOND = self._get_formated_amount(values['bond'])
         OTHR = self._get_formated_amount(values['others'])
 
-        # _logger.warning("WH_DATE:: %s, INV_DATE:: %s" %
-        #  (WH_DATE, INV_DATE))
-
         return RNC + pipe + ID_TYPE + pipe + NCF + pipe + NCM + pipe + INCOME_TYPE + pipe + \
                INV_DATE + pipe + WH_DATE + pipe + INV_AMOUNT + pipe + INV_ITBIS + pipe + \
                WH_ITBIS + pipe + PRC_ITBIS + pipe + WH_ISR + pipe + PCR_ISR + pipe + ISC + pipe + OTH_TAX + pipe + \
@@ -700,7 +695,7 @@ class DgiiReport(models.Model):
         header = "607|{}|{}|{}".format(str(company_vat).ljust(11), period, qty) + '\n'
         data = header + records
 
-        file_path = '/tmp/DGII_607_{}_{}.txt'.format(company_vat, period)
+        file_path = '/tmp/DGII_F_607_{}_{}.txt'.format(company_vat, period)
         with open(file_path, 'w', encoding="utf-8", newline='\r\n') as txt_607:
             txt_607.write(str(data))
 

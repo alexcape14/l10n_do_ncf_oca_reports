@@ -270,7 +270,7 @@ class DgiiReport606(models.Model):
         with open(purchase_path, 'rb') as purchase_file:
             self.write(
                     {'purchase_binary': base64.b64encode(purchase_file.read()),
-                     'purchase_filename': 'DGII_606_{}_{}{}.TXT'.
+                     'purchase_filename': 'DGII_F_606_{}_{}{}.TXT'.
                         format(company_fiscal_identification,
                                str(self.year),
                                str(self.month).zfill(2))})

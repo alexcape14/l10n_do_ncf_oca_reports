@@ -35,8 +35,10 @@
                                     <group name="606" col="2"
                                            class="bs-callout-info">
                                         <h2>606</h2>
-                                        <field name="purchase_binary" filename="purchase_filename" readonly="1"/>
+                                        <field name="purchase_binary" widget="binary" filename="purchase_filename" readonly="1"/>
+                                        <field name="purchase_filename" nolabel="1" invisible="1" />
                                         <field name="purchase_binary_xlsx" filename="purchase_filename_xlsx" readonly="1"/>
+                                        <field name="purchase_filename_xlsx" nolabel="1" invisible="1" />
                                         <field name="purchase_records" readonly="1"/>
                                         <field name="purchase_invoiced_amount" readonly="1"/>
                                         <field name="service_total_amount" readonly="1"/>
@@ -60,7 +62,9 @@
                                            class="bs-callout-success">
                                         <h2>607</h2>
                                         <field name="sale_binary" filename="sale_filename" readonly="1"/>
+                                        <field name="sale_filename" nolabel="1" invisible="1" />
                                         <field name="sale_binary_xlsx" filename="sale_filename_xlsx" readonly="1"/>
+                                        <field name="sale_filename_xlsx" nolabel="1" invisible="1" />
                                         <field name="sale_records" readonly="1"/>
                                         <field name="sale_invoiced_amount" readonly="1"/>
                                         <separator colspan="2"/>
@@ -81,7 +85,9 @@
                                            class="bs-callout-warning">
                                         <h2>608</h2>
                                         <field name="cancel_binary" filename="cancel_filename" readonly="1"/>
+                                        <field name="cancel_filename" nolabel="1" invisible="1" />
                                         <field name="cancel_binary_xlsx" filename="cancel_filename_xlsx" readonly="1"/>
+                                        <field name="cancel_filename_xlsx" nolabel="1" invisible="1" />
                                         <field name="cancel_records" readonly="1"/>
 
                                     </group>
@@ -90,7 +96,9 @@
                                     <group name="609" col="2" class="bs-callout-danger">
                                         <h2>609</h2>
                                         <field name="exterior_binary" filename="exterior_filename" readonly="1"/>
+                                        <field name="exterior_filename" nolabel="1" invisible="1" />
                                         <field name="exterior_binary_xlsx" filename="exterior_filename_xlsx" readonly="1"/>
+                                        <field name="exterior_filename_xlsx" nolabel="1" invisible="1" />
                                         <field name="exterior_records" readonly="1"/>
                                         <field name="exterior_invoiced_amount" readonly="1"/>
                                         <separator colspan="2"/>
