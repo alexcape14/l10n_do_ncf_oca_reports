@@ -50,7 +50,7 @@ class AccountTax(models.Model):
          ('cdt', 'Contribución Desarrollo Telecomunicaciones (CDT)'),
          ('propina_legal', 'Monto Propina Legal'),
          ('none', 'No Deducible')],
-         
+
         default="none", string="Tipo de Impuesto en Compra"
     )
 
@@ -174,7 +174,7 @@ class AccountInvoice(models.Model):
 
                 # Monto Otros Impuestos/Tasas
                 inv.other_taxes = self._convert_to_local_currency(inv, sum(tax_line_ids.filtered(
-                    lambda tax: tax.tax_id.purchase_tax_type not in 
+                    lambda tax: tax.tax_id.purchase_tax_type not in
                                 ['isr', 'ritbis', 'itbis_propor', 'itbis_costo']
                                 and tax.tax_id.tax_group_id.name not in fiscal_taxes).mapped('amount')))
 
@@ -317,7 +317,9 @@ class AccountInvoice(models.Model):
                         # ITBIS Retenido por Terceros
                         inv.third_withheld_itbis = self._convert_to_local_currency(
                             inv, sum([move_line.debit for move_line in payment_id.move_line_ids
-                                      if move_line.account_id.account_fiscal_type == 'A36']))
+                                      if move_line.account_id.account_fiscal_type == 'A36'
+                                      or move_line.account_id.sale_tax_type == 'ritbis_pjuridica_n_02_05'
+                                      ]))
 
                         # Retención de Renta por Terceros
                         inv.third_income_withholding = self._convert_to_local_currency(

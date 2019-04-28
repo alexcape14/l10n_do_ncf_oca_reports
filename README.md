@@ -15,6 +15,7 @@ En el catálogo de cuentas hemos colocado un nuevo campo opcional para escoger, 
 
 Con esta acción podemos obtener las columnas *7 - FECHA DE RETENCIÓN* y *10 - ITBIS RETENIDO POR TERCEROS* del reporte 607.
 
+NOTA: Lo anterior también se puede lograr vía el nuevo campo: **Tipo Cuenta Fiscal** ***(account_fiscal_type)*** que también está en el catálogo de cuenta. Para ello se debe escojer la opción: **Pagos Computables por otras Retenciones (N02-05)**
 
 ## REGISTRAR CORRECTAMENTE LAS FACTURAS DE PROVEEDORES QUE NOS DAN UN SERVICIO Y AL CUAL LE HACEMOS RETENCIÓN DE 30% ITBIS (REPORTE 606) SEGÚN LA NORMA 02-05
 Al registrar los impuestos de este tipo de factura, se debe seleccionar el **18% de ITBIS compra (servicios)** y además como le vamos a hacer retención de 30% ITBIS según la norma 02-05, debemos seleccionar también como impuesto **Retención ITBIS 30% a Persona Jurídica (Servicios)** y que por defecto ese impuesto viene atado a la cuenta contable **21030201 - ITBIS Retenido Persona Jurídica (N 02-05)**, además recordar que ese impuesto se debe configurar como **ITBIS retenido**
@@ -27,8 +28,9 @@ Con esta acción podemos obtener la columna *12 - ITBIS RETENIDO* del reporte 60
 ### ESTADO ACTUAL  
 
 - 606 en Alpha 3 (ver ISSUES AND PENDING STUFF) .
-- 607 en Alpha 2 (ver ISSUES AND PENDING STUFF) .
-- 608 y 609 en pendiente de desarrollo.
+- 607 en Alpha 3 (ver ISSUES AND PENDING STUFF) .
+- 608 en Alpha 1 (ver ISSUES AND PENDING STUFF) .
+- 609 en Alpha 1 (ver ISSUES AND PENDING STUFF) .
 - Guía del ITA (Anexo A del IT1) en Alpha 1
 - Guía del IT1 (Declaración de ITBIS) en Alpha 1
 
