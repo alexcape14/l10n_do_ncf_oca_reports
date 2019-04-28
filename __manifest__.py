@@ -47,7 +47,6 @@
         'security/ir.model.access.csv',
         'security/ir_rule.xml',
         'views/res_partner_views.xml',
-        'views/account_view.xml',
         'views/account_account_views.xml',
         'views/account_invoice_views.xml',
         'views/dgii_report_views.xml',
