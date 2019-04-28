@@ -15,6 +15,8 @@ En el catálogo de cuentas hemos colocado un nuevo campo opcional para escoger, 
 
 Con esta acción podemos obtener las columnas *7 - FECHA DE RETENCIÓN* y *10 - ITBIS RETENIDO POR TERCEROS* del reporte 607.
 
+NOTA: Lo anterior también se puede lograr vía el nuevo campo: **Tipo Cuenta Fiscal** ***(account_fiscal_type)*** que también está en el catálogo de cuenta. Para ello se debe escojer la opción: **Pagos Computables por otras Retenciones (N02-05)**
+
 
 ## REGISTRAR CORRECTAMENTE LAS FACTURAS DE PROVEEDORES QUE NOS DAN UN SERVICIO Y AL CUAL LE HACEMOS RETENCIÓN DE 30% ITBIS (REPORTE 606) SEGÚN LA NORMA 02-05
 Al registrar los impuestos de este tipo de factura, se debe seleccionar el **18% de ITBIS compra - Servicios** y además como le vamos a hacer retención de 30% ITBIS según la norma 02-05, debemos seleccionar también como impuesto **Retención 30% ITBIS Servicios a Jurídicas (N02-05)** y que por defecto ese impuesto viene atado a la cuenta contable **21030201 ITBIS Retenido a Persona Jurídica (N02-05)**, además recordar que ese impuesto se debe configurar como **ITBIS Retenido**
