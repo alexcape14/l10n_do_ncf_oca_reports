@@ -30,6 +30,9 @@ En el catálogo de cuentas hemos colocado un nuevo campo opcional para escoger, 
 
 Con esta acción podemos obtener las columnas *RETENCIÓN RENTA* del reporte 607.
 
+## NOTA SOBRE LA FECHA DE RETENCIÓN DE ITBIS Y/O ISR
+Si una factura tiene multiples pagos y a la misma se le realiza retención ya sea de ITBIS o ISR; la fecha de retención que pondrá el sistema será la fecha del último pago registrado dado que lo lógico sería que las retenciones se realicen durante el último pago y además la factura no se pone en estado pagado hasta tanto no se realice el pago total.   Lo anterior aplica tanto para facturas de compras como de ventas.
+
 
 ### ESTADO ACTUAL  
 
