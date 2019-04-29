@@ -132,6 +132,9 @@ class AccountInvoice(models.Model):
 
     def init(self):
         invoices = self.search([])
+
+        _logger.warning("invoices FOUND:: %s" % (invoices)) #TODO remember remove this debug.
+
         self._compute_invoice_payment_date(invoices)
 
     @api.multi
@@ -311,7 +314,7 @@ class AccountInvoice(models.Model):
         for inv in self:
             if inv.state == 'paid':
                 for payment in self._get_invoice_payment_widget(inv):
-                    payment_id = self.env['account.payment'].browse(payment.get('account_payment_id'))
+                    payment_id = self.env['account.payment'].browse(payment.get('account_payment_id'))                    
                     if payment_id:
                         # ITBIS Retenido por Terceros
                         inv.third_withheld_itbis = self._convert_to_local_currency(
@@ -326,6 +329,10 @@ class AccountInvoice(models.Model):
                             inv, sum([move_line.debit for move_line in move_lines
                                       if move_line.account_id.sale_tax_type == 'isr_withheld'
                                     ]))
+
+                        if inv.state == 'paid' and (inv.third_withheld_itbis or inv.third_income_withholding):
+                            # Fecha Pago
+                            self._compute_invoice_payment_date(inv)
 
     @api.multi
     @api.depends('invoiced_itbis', 'proportionality_tax', 'cost_itbis', 'state')
