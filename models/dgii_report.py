@@ -56,6 +56,7 @@ class DgiiReport(models.Model):
     _name = 'dgii.reports'
     _description = 'DGII Report'
     _inherit = ['mail.thread']
+    _order = 'name desc'
 
     name = fields.Char(string='Period', required=True, size=7)
     state = fields.Selection([('draft', 'New'), ('error', 'With error'),
