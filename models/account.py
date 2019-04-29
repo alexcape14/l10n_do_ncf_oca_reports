@@ -58,12 +58,11 @@ class AccountTax(models.Model):
 class AccountAccount(models.Model):
     _inherit = 'account.account'
 
-    # TODO we need validate with some accountant if here is necessary a list
-    # instead just a boolean field for the first option of the list.
     sale_tax_type = fields.Selection(
         [('ritbis_pjuridica_n_02_05', u'ITBIS Retenido Persona Jurídica (N 02-05)'),
          ('ritbis_provedores_inform_n_08_10', 'ITBIS Retenido a Proveedores Informales de Bienes (N 08-10)'),
          ('ritbis_pfisica_r_293_11', u'ITBIS Retenido Persona Física (R 293-11)'),
+         ('isr_withheld', u'Otras Retenciones (N07-07) (Ej. 5% ISR Gubernamentales en las ventas)'),
          ('none', 'No Aplica')],
         default="none", string="Tipo de Impuesto en Venta"
     )
@@ -323,9 +322,11 @@ class AccountInvoice(models.Model):
                                       ]))
 
                         # Retención de Renta por Terceros
+                        move_lines = self.env['account.move.line'].search([('invoice_id', '=', inv.id)])
                         inv.third_income_withholding = self._convert_to_local_currency(
-                            inv, sum([move_line.debit for move_line in payment_id.move_line_ids
-                                      if move_line.account_id.account_fiscal_type == 'ISR']))
+                            inv, sum([move_line.debit for move_line in move_lines
+                                      if move_line.account_id.sale_tax_type == 'isr_withheld'
+                                    ]))
 
     @api.multi
     @api.depends('invoiced_itbis', 'proportionality_tax', 'cost_itbis', 'state')
