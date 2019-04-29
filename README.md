@@ -24,6 +24,11 @@ Con esta acción podemos obtener la columna *12 - ITBIS RETENIDO* del reporte 60
 
 *Nota: del mismo modo, otro impuesto a escoger podría ser el Retención ISR 10% a Personas Físicas en los casos que aplique* 
 
+## CONFIGURAR LA(S) CUENTA(S) QUE ES(SON) USADA(S) PARA EL ISR RETENIDO EN VENTAS (REPORTE 607) SEGÚN LA NORMA 07-07
+En el catálogo de cuentas hemos colocado un nuevo campo opcional para escoger, este se llama: **Tipo de Impuesto en Venta** y las empresas que son objeto de retención de ISR en sus ventas, como por ejemplo al facturarle a entidades del estado que se retiene un 5%, deben escoger la opción **Otras Retenciones (N07-07) (Ej. 5% ISR Gubernamentales en las ventas)**, para el ejemplo del 5% de retención de ISR que realizan las entidades del estado, la cuenta recibe el nombre de *Otras Retenciones (N07-07)* que por defecto en el catálogo de cuentas dominicano en ODOO 12 es la *no. 21030308* y tiene el ID *118*.
+
+Con esta acción podemos obtener las columnas *RETENCIÓN RENTA* del reporte 607.
+
 
 ### ESTADO ACTUAL  
 
