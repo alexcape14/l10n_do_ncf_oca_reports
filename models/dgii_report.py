@@ -274,7 +274,12 @@ class DgiiReport(models.Model):
         return super(DgiiReport, self).unlink()
 
     def _get_pending_invoices(self):
-        return self.env['account.invoice'].search([('fiscal_status', '=', 'normal'), ('state', '=', 'paid')])
+        #TODO validate if $pendingInvoices is not returning unnecessary invoices that overhead the system.
+        pendingInvoices = self.env['account.invoice'].search([('fiscal_status', '=', 'normal'), ('state', '=', 'paid')])
+        
+        # _logger.warning("pendingInvoices:: %s" % (pendingInvoices))
+        
+        return pendingInvoices
 
     def _get_invoices(self, rec):
         """
@@ -354,7 +359,7 @@ class DgiiReport(models.Model):
 
         company_vat = report.company_id.vat
 
-        period = dt.strptime(report.name.replace('/', ''), '%m%Y').strftime('%Y%m')        
+        period = dt.strptime(report.name.replace('/', ''), '%m%Y').strftime('%Y%m')
 
         header = "606|{}|{}|{}".format(str(company_vat).ljust(11), period, qty) + '\n'
         data = header + records
@@ -820,8 +825,7 @@ class DgiiReport(models.Model):
                                                                                                                '15'] else False,
                     'income_type': inv.income_type,
                     'invoice_date': inv.date_invoice,
-                    'withholding_date': inv.payment_date if (inv.type != 'out_refund' and any(
-                        [inv.withholded_itbis, inv.income_withholding])) else False,
+                    'withholding_date': inv.payment_date if inv.state == 'paid' and self._has_withholding(inv) else False,
                     'invoiced_amount': inv.amount_untaxed_signed,
                     'invoiced_itbis': inv.invoiced_itbis,
                     'third_withheld_itbis': inv.third_withheld_itbis if inv.state == 'paid' else 0,
@@ -1127,21 +1131,31 @@ class DgiiReport(models.Model):
         # Drop 607 NCF Operations for recompute
         # Filter Applied to know where is belong to.
         self.env['dgii.reports.sale.summary'].search([('dgii_report_id', '=', self.id)]).unlink()
+
         invoices = self._get_invoices(rec=self)
+
+        # populate 606 report
         self._compute_606_data(invoice_ids=list(
             filter(lambda r: r.state in ['open', 'paid'] and
                              r.journal_id.purchase_type in ['normal', 'minor', 'informal'] and
                              r.type in ['in_invoice', 'in_refund'], invoices)))
+
+        # populate 607 report
         self._compute_607_data(invoice_ids=list(
             filter(lambda r: r.state in ['open', 'paid'] and r.type in ['out_invoice', 'out_refund'], invoices)))
+
+        # populate 608 report
         self._compute_608_data(invoice_ids=list(
             filter(lambda r: r.state in ['cancel'] and r.type in ['out_invoice', 'out_refund'], invoices)))
+
+        # populate 609 report
         self._compute_609_data(invoice_ids=list(
             filter(lambda r: r.state in ['open', 'paid'] and
                              r.type in ['in_invoice', 'in_refund'] and
                              r.partner_id.country_id.code != 'DO' and
                              r.journal_id.purchase_type == 'exterior'
                    , invoices)))
+
         self.state = 'generated'
 
     def _has_withholding(self, inv):

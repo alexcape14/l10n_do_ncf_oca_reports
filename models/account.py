@@ -132,10 +132,10 @@ class AccountInvoice(models.Model):
                     inv.payment_date = max(dates)
 
     def init(self):
+        
+        #TODO below lines seems not to be reached never.
+
         invoices = self.search([])
-
-        _logger.warning("invoices FOUND:: %s" % (invoices)) #TODO remember remove this debug.
-
         self._compute_invoice_payment_date(invoices)
 
     @api.multi
