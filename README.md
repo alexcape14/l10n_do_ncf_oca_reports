@@ -1,6 +1,17 @@
 # NCF DGII Reports
 
-Este módulo para ODOO 11 implementa los reportes de los números de comprobantes fiscales (NCF) para el cumplimento de la norma 06-18 de la Dirección de Impuestos Internos (DGII) en la República Dominicana, así como una guía para los reportes del ITBIS (IT1) y del anexo A del IT-1 (ITA). Ha sido probado en una empresa de servicios básica y necesita validaciones y calculos extras para ser implementado en negocios de personas físicas que usan su cédula como RNC, empresas de construcción, empresas de telecomunicaciones y proveedores del estado.
+   <pre>
+        ###############################
+        ## AVISO!
+        ###############################
+    </pre>    
+   ```              
+        print("Haz un pull request o integrate al equipo de desarrollo, no hasgas tu propia isla a parte.  
+            La colaboración en conjunto es más beneficiosa!")
+
+   ```   
+
+Este módulo para ODOO 11 implementa los reportes de los números de comprobantes fiscales (NCF) para el cumplimento de la norma 06-18 de la Dirección de Impuestos Internos (DGII) en la República Dominicana, así como un resumén para la declaración del ITBIS (IT1) y del anexo A del IT-1 (ITA) *(próximamente la guía completa de ambos reportes)*. Actualmente está en desarrollo y puede que necesita validaciones y calculos extras para ser implementado en negocios de personas físicas que usan su cédula como RNC, empresas de construcción y empresas de telecomunicaciones.
 
 Este repositorio tiene como objetivo que este módulo sea integrado en https://github.com/odoo-dominicana/l10n-dominicana y que sea mantenido por la comunidad de ODOO Dominicana.  Mientras tanto todo aquel que desee colaborar, puede hacer un Pull Request aquí.
 
@@ -59,14 +70,12 @@ Luego de implementar este módulo, se recomienda hacer una revisión manual de l
 ## ENDING STUFF
 
 - Ver todos los #TODO en el código.
-- Terminar Anexos Del IT-1
+- Terminar Anexos Del IT1 e ITA
+- Certificaciones de funcionalidad de contables
 
 
 
-### Créditos:  Basado en el trabajo de Eneldo Serrata para Marcos Organizador de Negocios SRL. (https://marcos.do/) 
+### Créditos: Basado en el trabajo inicial para ODOO 10 de Eneldo Serrata para Marcos Organizador de Negocios SRL. (https://marcos.do/)
 
 
-### Autor: Manuel Gonzalez para SOFTNET TEAM SRL (https://www.softnet.do)
-
-### Colaborardor: Jeffry De La Rosa para SOFTNET TEAM SRL (https://www.softnet.do)
-
+### Autores activos: Manuel Gonzalez (SOFTNET TEAM SRL - https://www.softnet.do) y Jeffry De La Rosa.
