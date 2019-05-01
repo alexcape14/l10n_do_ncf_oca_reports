@@ -77,10 +77,14 @@
                             <field name="service_total_amount" string="Service Total Amount"/>
                             <field name="good_total_amount" string="Good Total Amount"/>
                         </group>
-                        <group col="3" string="Withholding" groups="account.group_account_manager">
-                            <field name="withholded_itbis" string="Withheld ITBIS"/>
-                            <field name="isr_withholding_type" string="ISR Withholding Type"/>
-                            <field name="income_withholding" string="Income Withholding"/>
+                        <group col="3" string="Withholding" groups="account.group_account_manager"
+                            attrs="{'invisible': [('income_withholding', '=', 0.00), ('withholded_itbis', '=', 0.00)]}" >
+                            <field name="withholded_itbis" string="Withheld ITBIS"
+                                attrs="{'invisible': [('withholded_itbis', '=', 0.00)]}" />
+                            <field name="isr_withholding_type" string="ISR Withholding Type"
+                                attrs="{'invisible': [('isr_withholding_type', '=', False)]}" />
+                            <field name="income_withholding" string="Income Withholding"
+                                attrs="{'invisible': [('income_withholding', '=', 0.00)]}" />
                         </group>
                         <group col="3" string="606">
                             <field name="fiscal_status" widget="state_selection" readonly="1"/>

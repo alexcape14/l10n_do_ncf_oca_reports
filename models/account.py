@@ -193,7 +193,7 @@ class AccountInvoice(models.Model):
                 inv.cost_itbis = self._convert_to_local_currency(inv, sum(tax_line_ids.filtered(
                     lambda tax: tax.tax_id.purchase_tax_type == 'itbis_costo').mapped('amount')))
 
-                if inv.type == 'in_invoice':
+                if inv.type == 'in_invoice' and inv.state == 'paid':
                     # Monto ITBIS Retenido
                     inv.withholded_itbis = self._convert_to_local_currency(inv, sum(tax_line_ids.filtered(
                         lambda tax: tax.tax_id.purchase_tax_type == 'ritbis').mapped('amount')))
@@ -201,10 +201,9 @@ class AccountInvoice(models.Model):
                     # Monto Retención Renta
                     inv.income_withholding = self._convert_to_local_currency(inv, sum(tax_line_ids.filtered(
                         lambda tax: tax.tax_id.purchase_tax_type == 'isr').mapped('amount')))
-
-                    if inv.state == 'paid' and inv.withholded_itbis or inv.income_withholding:
-                        # Fecha Pago
-                        self._compute_invoice_payment_date(inv)
+                    
+                    # Fecha Pago
+                    self._compute_invoice_payment_date(inv)
 
     @api.multi
     @api.depends('invoice_line_ids', 'invoice_line_ids.product_id', 'state')
@@ -248,7 +247,7 @@ class AccountInvoice(models.Model):
         08 -- Juegos Telefónicos
         """
         for inv in self:
-            if inv.type == 'in_invoice' and inv.state != 'draft':
+            if inv.type == 'in_invoice' and inv.state == 'paid':
                 isr = [tax_line.tax_id for tax_line in inv.tax_line_ids if tax_line.tax_id.purchase_tax_type == 'isr']
                 if isr:
                     inv.isr_withholding_type = isr.pop(0).isr_retention_type
