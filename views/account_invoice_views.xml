@@ -25,6 +25,8 @@
                             <field name="legal_tip" string="Legal tip amount"/>
                         </group>
                         <group col="3" string="607">
+                            <field name="payment_date" string="Payment date"
+                                attrs="{'invisible': [('payment_date', '=', False)]}" />                            
                             <field name="fiscal_status" widget="state_selection" readonly="1"/>
                         </group>
                     </group>
