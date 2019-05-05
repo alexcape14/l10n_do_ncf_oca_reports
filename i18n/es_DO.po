@@ -894,9 +894,10 @@ msgstr ""
 
 #. module: l10n_do_ncf_oca_reports
 #: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line__identification_type
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line__identification_friendly_name
 #: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_sale_line__identification_type
 msgid "Identification Type"
-msgstr ""
+msgstr "Tipo Documento"
 
 #. module: l10n_do_ncf_oca_reports
 #: model:ir.model.fields,help:l10n_do_ncf_oca_reports.field_dgii_report_606__message_unread
@@ -1026,6 +1027,7 @@ msgstr "Retención ISR Fecha"
 #. module: l10n_do_ncf_oca_reports
 #: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_account_invoice__isr_withholding_type
 #: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line__isr_withholding_type
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line__isr_withholding_friendly_name
 msgid "Isr Withholding Type"
 msgstr "Tipo Retención ISR"
 
@@ -1448,6 +1450,7 @@ msgstr "Forma de Pago"
 
 #. module: l10n_do_ncf_oca_reports
 #: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line__payment_type
+#: model:ir.model.fields,field_description:l10n_do_ncf_oca_reports.field_dgii_reports_purchase_line__payment_way_friendly_name
 msgid "Payment Type"
 msgstr "Tipo de pago"
 
