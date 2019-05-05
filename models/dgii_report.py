@@ -37,6 +37,7 @@ _logger = logging.getLogger(__name__)
 from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
 
+from .tools import get_payments, has_withholding
 
 class DgiiReportSaleSummary(models.Model):
     _name = 'dgii.reports.sale.summary'
@@ -274,10 +275,15 @@ class DgiiReport(models.Model):
         return super(DgiiReport, self).unlink()
 
     def _get_pending_invoices(self):
-        #TODO validate if $pendingInvoices is not returning unnecessary invoices that overhead the system.
-        pendingInvoices = self.env['account.invoice'].search([('fiscal_status', '=', 'normal'), ('state', '=', 'paid')])
-        
-        # _logger.warning("pendingInvoices:: %s" % (pendingInvoices))
+        '''
+            #TODO validate to deprecate this method.
+            by now seems like any invoice is not getting
+            'normal' status.
+        '''        
+        pendingInvoices = self.env['account.invoice'].search([
+            ('fiscal_status', '=', 'normal'), 
+            ('state', '=', 'paid')
+        ])    
         
         return pendingInvoices
 
@@ -825,7 +831,7 @@ class DgiiReport(models.Model):
                                                                                                                '15'] else False,
                     'income_type': inv.income_type,
                     'invoice_date': inv.date_invoice,
-                    'withholding_date': inv.payment_date if inv.state == 'paid' and self._has_withholding(inv) else False,
+                    'withholding_date': inv.payment_date if inv.state == 'paid' and has_withholding(self, inv) else False,
                     'invoiced_amount': inv.amount_untaxed_signed,
                     'invoiced_itbis': inv.invoiced_itbis,
                     'third_withheld_itbis': inv.third_withheld_itbis if inv.state == 'paid' else 0,
@@ -1156,14 +1162,7 @@ class DgiiReport(models.Model):
                              r.journal_id.purchase_type == 'exterior'
                    , invoices)))
 
-        self.state = 'generated'
-
-    def _has_withholding(self, inv):
-        """Validate if given invoice has an Withholding tax"""
-        return True if any([inv.income_withholding,
-                            inv.withholded_itbis,
-                            inv.third_withheld_itbis,
-                            inv.third_income_withholding]) else False
+        self.state = 'generated'        
 
     @api.multi
     def _invoice_status_sent(self):
@@ -1181,7 +1180,11 @@ class DgiiReport(models.Model):
                     inv.fiscal_status = 'done'
                     continue
 
-                if self._has_withholding(inv):
+                '''
+                    #TODO validate when the script reaching this validation 
+                    ... and for what is 'normal' status exactly.                
+                '''
+                if has_withholding(self, inv):
                     inv.fiscal_status = 'normal'
                 else:
                     inv.fiscal_status = 'done'
