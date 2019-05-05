@@ -274,12 +274,12 @@ class DgiiReport(models.Model):
             #TODO validate to deprecate this method.
             by now seems like any invoice is not getting
             'normal' status.
-        '''        
+        '''
         pendingInvoices = self.env['account.invoice'].search([
-            ('fiscal_status', '=', 'normal'), 
+            ('fiscal_status', '=', 'normal'),
             ('state', '=', 'paid')
-        ])    
-        
+        ])
+
         return pendingInvoices
 
     def _get_invoices(self, rec):
@@ -1157,7 +1157,7 @@ class DgiiReport(models.Model):
                              r.journal_id.purchase_type == 'exterior'
                    , invoices)))
 
-        self.state = 'generated'        
+        self.state = 'generated'
 
     @api.multi
     def _invoice_status_sent(self):
@@ -1176,8 +1176,8 @@ class DgiiReport(models.Model):
                     continue
 
                 '''
-                    #TODO validate when the script reaching this validation 
-                    ... and for what is 'normal' status exactly.                
+                    #TODO validate when the script reaching this validation
+                    ... and for what is 'normal' status exactly.
                 '''
                 if has_withholding(self, inv):
                     inv.fiscal_status = 'normal'
@@ -1233,11 +1233,51 @@ class DgiiReport(models.Model):
 
 class DgiiReportPurchaseLine(models.Model):
     _name = 'dgii.reports.purchase.line'
-    _order = 'line asc'
+    _description = 'DGII Report Purchase Line'
+    _order = "invoice_date, fiscal_invoice_number ASC"
+
+    def get_payment_way_friendly_name(self, payment_type):
+
+        payment_way_friendly_name = payment_type
+
+        if payment_type == '01':
+            payment_way_friendly_name = 'Efectivo (01)'
+        elif payment_type == '02':
+            payment_way_friendly_name = 'Ch/Trans/Dep. (02)'
+        elif payment_type == '03':
+            payment_way_friendly_name = 'TC/TD (03)'
+        elif payment_type == '04':
+            payment_way_friendly_name = 'Compra cred. (04)'
+        elif payment_type == '05':
+            payment_way_friendly_name = 'Permuta (05)'
+        elif payment_type == '06':
+            payment_way_friendly_name = 'Nota cred. (06)'
+        elif payment_type == '07':
+            payment_way_friendly_name = 'Mixto (07)'
+
+        return payment_way_friendly_name
+
+    def _get_friendly_name(self):
+
+        dict_isr_withholding_friendly_name = {
+            False: '',
+            '01': 'Alquileres (01)',
+            '02': 'Honorarios por servicios (02)',
+            '03': 'Otras rentas (03)',
+            '04': 'Otras rentas (rentas presuntas) (04)',
+            '05': 'Intereses pagados a personas jurídicas residentes (05)',
+            '06': 'Intereses pagados a personas físicas residentes (06)',
+            '07': 'Retención por proveedores del Estado (07)',
+            '08': 'Juegos telefónicos (08)'
+        }
+
+        for rec in self:
+            rec.identification_friendly_name = "RNC (1)" if rec.identification_type == '1' else "C.I. (2)"
+            rec.payment_way_friendly_name = self.get_payment_way_friendly_name(rec.payment_type)
+            rec.isr_withholding_friendly_name = dict_isr_withholding_friendly_name[rec.isr_withholding_type]
 
     dgii_report_id = fields.Many2one('dgii.reports', ondelete='cascade')
     line = fields.Integer()
-
     rnc_cedula = fields.Char(size=11)
     identification_type = fields.Char(size=1)
     expense_type = fields.Char(size=2)
@@ -1265,6 +1305,10 @@ class DgiiReportPurchaseLine(models.Model):
     invoice_partner_id = fields.Many2one('res.partner')
     invoice_id = fields.Many2one('account.invoice')
     credit_note = fields.Boolean()
+
+    identification_friendly_name = fields.Char(compute=_get_friendly_name, size=30)
+    payment_way_friendly_name = fields.Char(compute=_get_friendly_name, size=30)
+    isr_withholding_friendly_name = fields.Char(compute=_get_friendly_name, size=30)
 
 
 class DgiiReportSaleLine(models.Model):
