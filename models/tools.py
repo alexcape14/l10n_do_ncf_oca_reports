@@ -30,6 +30,9 @@ import re
 
 from odoo import api
 
+import logging
+_logger = logging.getLogger(__name__)
+
 TODAY = datetime.date.today()
 
 FORMA_DE_PAGO = [
@@ -71,11 +74,6 @@ def today(self):
 
 
 @api.model
-def gen_txt(self):
-    pass
-
-
-@api.model
 def get_type_identification(self, vat):
     rnc_schedule = vat and re.sub("[^0-9]", "", vat.strip()) or False
     identification_type = "3"
@@ -92,24 +90,74 @@ def get_type_identification(self, vat):
 
 
 @api.model
-def get_all_invoice(self, start_date, end_date):
+def get_invoices(self, start_date, end_date):
     """
-    Esta funcion retorna todas las facturas de una fecha inicial a una final.
+    Return all invoices from a given date range.
     """
     invoice_ids = self.env["account.invoice"] \
         .search([('date_invoice', '>=', start_date),
                  ('date_invoice', '<=', end_date)])
+    
     return invoice_ids
 
 
 @api.model
-def get_all_payments(self, start_date, end_date, has_invoice=True):
-    paid_invoice_ids = self.env["account.payment"] \
+def get_payments(self, start_date, end_date):
+    """
+    Return all payents from a given date range.
+    
+    The condition: invoice_ids', '!=', False 
+    is an ODOO ORM way to only get payments with an
+    associate invoice.
+
+    We are consulting account_payment instead account_invoice
+    'cause the payment_date field that is there was written by us
+    and if there is something wrong with our logic (or ODOO logic)
+    we can see the difference in the report and check what is wrong.    
+    """    
+    payments = self.env["account.payment"] \
         .search([('payment_date', '>=', start_date),
                  ('payment_date', '<=', end_date),
-                 ('has_invoice', '=', has_invoice)])
-    return paid_invoice_ids
+                 ('invoice_ids', '!=', False)])
+    
+    return payments
 
+''''
+    With this method, we want get all invoices paid in a period of time (normally months later)
+    and use them in the report of the current month (period: start date and end date given), but
+    only if those invoices have retentions (ITBIS or ISR).
+
+    For more information check below links:
+    https://ayuda.dgii.gov.do/dgii/topics/facturas-con-retenciones-no-pagadas-en-la-fechas-que-se-emiten
+    https://github.com/odoo-dominicana/l10n-dominicana/issues/384#issuecomment-488862323
+
+'''
+def get_late_paid_invoices_having_withholding(self, start_date, end_date):
+    invoices = self.env["account.invoice"]
+    payments = get_payments(self, start_date, end_date)
+
+    for payment in payments:
+        '''
+            Here we want the latest payment, this means that 
+            this was the date when the invoice was paid fully.
+        '''
+        self.env.cr.execute("select * from account_invoice_payment_rel \
+            where payment_id = %s order by payment_id desc limit 1" % payment.id)
+
+        payment_rel = self.env.cr.dictfetchone()
+        invoice = self.env["account.invoice"].browse(payment_rel['invoice_id'])
+
+        if has_withholding(self, invoice):
+            invoices |= invoice
+
+    return invoices    
+
+def has_withholding(self, inv):
+    """Validate if given invoice has an Withholding tax"""
+    return True if any([inv.income_withholding,
+                        inv.withholded_itbis,
+                        inv.third_withheld_itbis,
+                        inv.third_income_withholding]) else False    
 
 @api.multi
 def post_error_list(self, error_list):
