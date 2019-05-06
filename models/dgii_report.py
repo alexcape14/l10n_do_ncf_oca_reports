@@ -36,7 +36,8 @@ _logger = logging.getLogger(__name__)
 from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
 
-from .tools import get_invoices, get_payments, has_withholding, prepare_list_for_606_xlsx
+from .tools import get_invoices, get_payments, has_withholding, \
+    prepare_list_for_606_xlsx, validateBeforeDisplayInReport
 
 class DgiiReportSaleSummary(models.Model):
     _name = 'dgii.reports.sale.summary'
@@ -420,23 +421,23 @@ class DgiiReport(models.Model):
                     'fiscal_invoice_number': inv.reference,  # inv.reference,
                     'modified_invoice_number': inv.origin_out,
                     'invoice_date': inv.date_invoice,
-                    'payment_date': inv.payment_date,
+                    'payment_date': validateBeforeDisplayInReport(rec, inv, inv.payment_date),
                     'service_total_amount': inv.service_total_amount,
                     'good_total_amount': inv.good_total_amount,
                     'invoiced_amount': inv.amount_untaxed_signed,
                     'invoiced_itbis': inv.invoiced_itbis,
-                    'withholded_itbis': inv.withholded_itbis if inv.state == 'paid' else 0,
+                    'withholded_itbis': validateBeforeDisplayInReport(rec, inv, inv.withholded_itbis),
                     'proportionality_tax': inv.proportionality_tax,
                     'cost_itbis': inv.cost_itbis,
                     'advance_itbis': inv.advance_itbis,
-                    'purchase_perceived_itbis': 0,  # Falta computarlo en la factura
-                    'purchase_perceived_isr': 0,  # Falta computarlo en la factura
-                    'isr_withholding_type': inv.isr_withholding_type,
-                    'income_withholding': inv.income_withholding if inv.state == 'paid' else 0,
+                    'purchase_perceived_itbis': 0,  #TODO Falta computarlo en la factura
+                    'purchase_perceived_isr': 0,  #TODO Falta computarlo en la factura
+                    'isr_withholding_type': validateBeforeDisplayInReport(rec, inv, inv.isr_withholding_type),
+                    'income_withholding': validateBeforeDisplayInReport(rec, inv, inv.income_withholding),
                     'selective_tax': inv.selective_tax,
                     'other_taxes': inv.other_taxes,
                     'legal_tip': inv.legal_tip,
-                    'payment_type': inv.payment_form,
+                    'payment_type': validateBeforeDisplayInReport(rec, inv, inv.payment_form, '04'),
                     'invoice_partner_id': inv.partner_id.id,
                     'invoice_id': inv.id,
                     'credit_note': True if inv.type == 'in_refund' else False

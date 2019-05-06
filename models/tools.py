@@ -135,21 +135,21 @@ def get_invoices(self, rec):
 def get_payments(self, start_date, end_date):
     """
     Return all payents from a given date range.
-    
-    The condition: invoice_ids', '!=', False 
+
+    The condition: invoice_ids', '!=', False
     is an ODOO ORM way to only get payments with an
     associate invoice.
 
     We are consulting account_payment instead account_invoice
     'cause the payment_date field that is there was written by us
     and if there is something wrong with our logic (or ODOO logic)
-    we can see the difference in the report and check what is wrong.    
-    """    
+    we can see the difference in the report and check what is wrong.
+    """
     payments = self.env["account.payment"] \
         .search([('payment_date', '>=', start_date),
                  ('payment_date', '<=', end_date),
                  ('invoice_ids', '!=', False)])
-    
+
     return payments
 
 ''''
@@ -168,7 +168,7 @@ def get_late_paid_invoices_having_withholding(self, start_date, end_date):
 
     for payment in payments:
         '''
-            Here we want the latest payment, this means that 
+            Here we want the latest payment, this means that
             this was the date when the invoice was paid fully.
         '''
         self.env.cr.execute("select * from account_invoice_payment_rel \
@@ -180,14 +180,34 @@ def get_late_paid_invoices_having_withholding(self, start_date, end_date):
         if has_withholding(self, invoice):
             invoices |= invoice
 
-    return invoices    
+    return invoices
 
 def has_withholding(self, inv):
     """Validate if given invoice has an Withholding tax"""
     return True if any([inv.income_withholding,
                         inv.withholded_itbis,
                         inv.third_withheld_itbis,
-                        inv.third_income_withholding]) else False    
+                        inv.third_income_withholding]) else False
+
+
+'''
+    Don't display some invoice informations in 606 and 607 report when
+    the invoice was pay month(s) later.
+
+    For more information check below links:
+    https://ayuda.dgii.gov.do/dgii/topics/facturas-con-retenciones-no-pagadas-en-la-fechas-que-se-emiten
+    https://github.com/odoo-dominicana/l10n-dominicana/issues/384#issuecomment-488862323    
+'''
+def validateBeforeDisplayInReport(report, inv, defaultValue, paymentForm = False):
+    ReportMonth, ReportYear = (int(x) for x in report.name.split("/")) 
+    invoiceMonth = int(inv.date_invoice.strftime('%m'))
+    paymentMonth = int(inv.payment_date.strftime('%m')) if inv.payment_date else False
+
+    if invoiceMonth != paymentMonth and invoiceMonth == ReportMonth:
+        return paymentForm if paymentForm else False
+    else:
+        return defaultValue
+
 
 @api.multi
 def post_error_list(self, error_list):
