@@ -25,8 +25,10 @@
 """
 Funciones tools para el modulo ncf_dgii_reports
 """
+import calendar
 import datetime
 import re
+from datetime import datetime as dt
 
 from odoo import api
 
@@ -89,15 +91,43 @@ def get_type_identification(self, vat):
     return rnc_schedule, identification_type
 
 
-@api.model
-def get_invoices(self, start_date, end_date):
+def get_pending_invoices(self):
+    '''
+        #TODO validate to deprecate this method.
+        by now seems like any invoice is not getting
+        'normal' status.
+    '''
+    pendingInvoices = self.env['account.invoice'].search([
+        ('fiscal_status', '=', 'normal'),
+        ('state', '=', 'paid')
+    ])
+
+    return pendingInvoices
+
+
+def get_invoices(self, rec):
     """
     Return all invoices from a given date range.
+
+    Given rec and state, return a recordset of invoices
+    :param rec: dgii.reports object
+    :return: filtered invoices
     """
-    invoice_ids = self.env["account.invoice"] \
-        .search([('date_invoice', '>=', start_date),
-                 ('date_invoice', '<=', end_date)])
-    
+    month, year = rec.name.split('/')
+    last_day = calendar.monthrange(int(year), int(month))[1]
+    start_date = '{}-{}-01'.format(year, month)
+    end_date = '{}-{}-{}'.format(year, month, last_day)
+
+    invoice_ids = self.env['account.invoice'].search(
+        [('date_invoice', '>=', start_date),
+            ('date_invoice', '<=', end_date),
+            ('company_id', '=', self.company_id.id)],
+        order='date_invoice asc').filtered(lambda inv: (inv.journal_id.purchase_type != 'others') or
+                                                        (inv.journal_id.ncf_control is True))
+
+    # Append pending invoces (fiscal_status = Partial, state = Paid)
+    invoice_ids += get_pending_invoices(self)
+
     return invoice_ids
 
 
@@ -182,3 +212,80 @@ def post_error_list(self, error_list):
     else:
         self.message_post(body="Generado correctamente")
         self.state = "done"
+
+def prepare_list_for_606_xlsx(vals):
+    def get_expense_type(val):
+        key_sel = {
+            '01': '01-GASTOS DE PERSONAL',
+            '02': '02-GASTOS POR TABAJOS, SUMINISTROS Y SERVICIOS',
+            '03': '03-ARRENDAMIENTOS',
+            '04': '04-GASTOS DE ACTIVOS FIJOS',
+            '05': '05-GASTOS DE REPRESENTACION',
+            '06': '06-OTRAS DEDUCCIONES ADMITIDAS',
+            '07': '07-GASTOS FINANCIEROS',
+            '08': '08-GASTOS EXTRAORDINARIOS',
+            '09': '09-COMPRAS Y GRASTOS QUE FORMAN PARTE DEL COSTO DE VENTA',
+            '10': '10-ADQUISICIONES DE ACTIVOS',
+            '11': '11-GASTOS DE SEGUROS',
+        }
+        return key_sel.get(str(val), '')
+
+    def get_format_date(val):
+        return (dt.strptime(str(val), '%Y-%m-%d').strftime('%Y%m') if val else "",
+                dt.strptime(str(val), '%Y-%m-%d').strftime('%d') if val else "")
+
+    def get_payment_type(val):
+        key_sel = {
+            '01': '01-EFECTIVO',
+            '02': '02-CHEQUES/TRANSFERENCIAS/DEPOSITO',
+            '03': '03-TARJETA CREDITO/DEBITO',
+            '04': '04-COMPRA A CREDITO',
+            '05': '05-PERMUTA',
+            '06': '06-NOTA DE CREDITO',
+            '07': '07-MIXTO',
+        }
+        return key_sel.get(str(val), '04')
+
+    def get_isr_withholding_type(val):
+        key_sel = {
+            '01': '01-ALQUILERES',
+            '02': '02-HONORARIOS POR SERVICIOS',
+            '03': '03-OTRAS RENTAS',
+            '04': '04-OTRAS RENTAS (Rentas Presuntas)',
+            '05': '05-INTERESES PAGADOS A PERSONAS JURIDICAS RESIDENTES',
+            '06': '06-INTERESES PAGADOS A PERSONAS FISICAS RESIDENTES',
+            '07': '07-RETENCION POR PROVEEDORES DEL ESTADO',
+            '08': '08-JUEGOS TELEFONICOS',
+        }
+        return key_sel.get(str(val), '')
+
+    inv_date, inv_day = get_format_date(vals['invoice_date'])
+    pay_date, pay_day = get_format_date(vals['payment_date'])
+
+    list_detail = [vals['rnc_cedula'] or '',
+                    vals['identification_type'] or '',
+                    get_expense_type(vals['expense_type']),
+                    vals['fiscal_invoice_number'] or '',
+                    vals['modified_invoice_number'] or '',
+                    inv_date,
+                    inv_day,
+                    pay_date,
+                    pay_day,
+                    vals['service_total_amount'] or '',
+                    vals['good_total_amount'] or '',
+                    vals['invoiced_amount'] or '',
+                    vals['invoiced_itbis'] or '',
+                    vals['withholded_itbis'] or '',
+                    vals['proportionality_tax'] or '',
+                    vals['cost_itbis'] or '',
+                    vals['advance_itbis'] or '',
+                    vals['purchase_perceived_itbis'] or '',
+                    vals['purchase_perceived_isr'] or '',
+                    get_isr_withholding_type(vals['isr_withholding_type']),
+                    vals['income_withholding'] or '',
+                    vals['selective_tax'] or '',
+                    vals['other_taxes'] or '',
+                    vals['legal_tip'] or '',
+                    get_payment_type(vals['payment_type']),
+                    ]
+    return list_detail
