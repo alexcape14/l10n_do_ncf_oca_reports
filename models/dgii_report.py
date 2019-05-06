@@ -458,22 +458,35 @@ class DgiiReport(models.Model):
         ctx = context.copy()
         return base_currency_id.with_context(ctx).compute(amount, user_currency_id)
 
-    def _get_sale_payments_forms(self, invoice_id):
+    def _get_sale_payments_forms(self, report, invoice_id):
+
         payments_dict = self._get_payments_dict()
         Invoice = self.env['account.invoice']
         Payment = self.env['account.payment']
 
-        if invoice_id.type == 'out_invoice':
+        if invoice_id.type == 'out_invoice' and not validateBeforeDisplayInReport(report, invoice_id, True):
+            ''' 
+                We are using invoice_id.amount_untaxed + invoice_id.invoiced_itbis 
+                instead of invoice_id.amount_total_signed 'cause amount_total_signed
+                doesn't have the invoice full amount in some case like when we have
+                ISR withholding in our sales, this apply also for amount_tax that store 
+                the tax less the withholding.  This is ODOO approach until v.12 that we 
+                have to select as tax ISR withholding in our sales.
+            '''
+            payments_dict['credit'] = self._convert_to_user_currency(invoice_id.currency_id, invoice_id.amount_untaxed + invoice_id.invoiced_itbis)
+
+        elif invoice_id.type == 'out_invoice':
             for payment in Invoice._get_invoice_payment_widget(invoice_id):
                 payment_id = Payment.browse(payment['account_payment_id'])
                 if payment_id:
                     key = payment_id.journal_id.payment_form
-                    if key:
+                    if key:                        
                         payments_dict[key] += self._convert_to_user_currency(invoice_id.currency_id, payment['amount'])
                 else:
-                    # If invoices is paid, but has not payment_id, assume it is a credit note
                     payments_dict['swap'] += self._convert_to_user_currency(invoice_id.currency_id, payment['amount'])
+
             payments_dict['credit'] += self._convert_to_user_currency(invoice_id.currency_id, invoice_id.residual)
+
         else:
             cn_payments = Invoice._get_invoice_payment_widget(invoice_id)
             for p in cn_payments:
@@ -693,7 +706,6 @@ class DgiiReport(models.Model):
             SaleLine = self.env['dgii.reports.sale.line']
             SaleLine.search([('dgii_report_id', '=', rec.id)]).unlink()
 
-            # invoice_ids = self._get_invoices(rec, ['open', 'paid'], ['out_invoice', 'out_refund'])
             line = 0
             op_dict = self._get_607_operations_dict()
             payment_dict = self._get_payments_dict()
@@ -706,7 +718,7 @@ class DgiiReport(models.Model):
                 income_dict = self._process_income_dict(income_dict, inv)
                 inv.fiscal_status = 'blocked'
                 rnc_ced = self.formated_rnc_cedula(inv.partner_id.vat)
-                payments = self._get_sale_payments_forms(inv)
+                payments = self._get_sale_payments_forms(rec, inv)
                 values = {
                     'dgii_report_id': rec.id,
                     'line': line,
@@ -719,13 +731,13 @@ class DgiiReport(models.Model):
                                                                                                                '15'] else False,
                     'income_type': inv.income_type,
                     'invoice_date': inv.date_invoice,
-                    'withholding_date': inv.payment_date if inv.state == 'paid' and has_withholding(self, inv) else False,
+                    'withholding_date': validateBeforeDisplayInReport(rec, inv, inv.payment_date) if has_withholding(self, inv) else False,
                     'invoiced_amount': inv.amount_untaxed_signed,
                     'invoiced_itbis': inv.invoiced_itbis,
-                    'third_withheld_itbis': inv.third_withheld_itbis if inv.state == 'paid' else 0,
-                    'perceived_itbis': 0,  # Pendiente
-                    'third_income_withholding': inv.third_income_withholding if inv.state == 'paid' else 0,
-                    'perceived_isr': 0,  # Pendiente
+                    'third_withheld_itbis': validateBeforeDisplayInReport(rec, inv, inv.third_withheld_itbis),
+                    'perceived_itbis': 0,  #TODO Pendiente
+                    'third_income_withholding': validateBeforeDisplayInReport(rec, inv, inv.third_income_withholding),
+                    'perceived_isr': 0,  #TODO Pendiente
                     'selective_tax': inv.selective_tax,
                     'other_taxes': inv.other_taxes,
                     'legal_tip': inv.legal_tip,
