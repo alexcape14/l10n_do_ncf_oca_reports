@@ -96,6 +96,8 @@ def get_pending_invoices(self):
         #TODO validate to deprecate this method.
         by now seems like any invoice is not getting
         'normal' status.
+
+        By now this method is deprecated.
     '''
     pendingInvoices = self.env['account.invoice'].search([
         ('fiscal_status', '=', 'normal'),
@@ -126,7 +128,9 @@ def get_invoices(self, rec):
                                                         (inv.journal_id.ncf_control is True))
 
     # Append pending invoces (fiscal_status = Partial, state = Paid)
-    invoice_ids += get_pending_invoices(self)
+    # invoice_ids |= get_pending_invoices(self)
+    
+    invoice_ids |= get_late_paid_invoices_having_withholding(self, start_date, end_date)
 
     return invoice_ids
 
