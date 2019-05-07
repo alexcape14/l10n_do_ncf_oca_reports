@@ -317,7 +317,7 @@ class AccountInvoice(models.Model):
                     payment_id = self.env['account.payment'].browse(payment.get('account_payment_id'))                    
                     if payment_id:
                         # ITBIS Retenido por Terceros
-                        inv.third_withheld_itbis = self._convert_to_local_currency(
+                        inv.third_withheld_itbis += self._convert_to_local_currency(
                             inv, sum([move_line.debit for move_line in payment_id.move_line_ids
                                       if move_line.account_id.account_fiscal_type == 'A36'
                                       or move_line.account_id.sale_tax_type == 'ritbis_pjuridica_n_02_05'
@@ -325,7 +325,7 @@ class AccountInvoice(models.Model):
 
                         # Retención de Renta por Terceros
                         move_lines = self.env['account.move.line'].search([('invoice_id', '=', inv.id)])
-                        inv.third_income_withholding = self._convert_to_local_currency(
+                        inv.third_income_withholding += self._convert_to_local_currency(
                             inv, sum([move_line.debit for move_line in move_lines
                                       if move_line.account_id.sale_tax_type == 'isr_withheld'
                                     ]))
