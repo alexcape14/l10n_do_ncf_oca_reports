@@ -480,8 +480,8 @@ class DgiiReport(models.Model):
                 payment_id = Payment.browse(payment['account_payment_id'])
                 if payment_id:
                     key = payment_id.journal_id.payment_form
-                    if key:                        
-                        payments_dict[key] += self._convert_to_user_currency(invoice_id.currency_id, payment['amount'])
+                    if key:
+                        payments_dict[key] += self._convert_to_user_currency(invoice_id.currency_id, payment_id.amount)
                 else:
                     payments_dict['swap'] += self._convert_to_user_currency(invoice_id.currency_id, payment['amount'])
 
