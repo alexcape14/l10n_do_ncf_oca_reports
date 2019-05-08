@@ -47,8 +47,8 @@ Si una factura tiene multiples pagos y a la misma se le realiza retención ya se
 
 ### ESTADO ACTUAL  
 
-- 606 en Alpha 1 (ver ISSUES AND PENDING STUFF) .
-- 607 en Alpha 1 (ver ISSUES AND PENDING STUFF) .
+- 606 en Alpha 2 (ver ISSUES AND PENDING STUFF) .
+- 607 en Alpha 2 (ver ISSUES AND PENDING STUFF) .
 - 608 en Alpha 1 (ver ISSUES AND PENDING STUFF) .
 - 609 en Alpha 1 (ver ISSUES AND PENDING STUFF) .
 - Guía del ITA (Anexo A del IT1) en desarrollo.
@@ -78,3 +78,20 @@ Luego de implementar este módulo, se recomienda hacer una revisión manual de l
 ### Créditos:  Basado en el trabajo inicial para ODOO 10 de Eneldo Serrata para Marcos Organizador de Negocios SRL. (https://marcos.do/) 
 
 ### Autores activos: Manuel Gonzalez (SOFTNET TEAM SRL - https://www.softnet.do) y Jeffry De La Rosa
+
+## SCREEMSHOTS DE EJEMPLOS.
+
+### DGII TAB EN LAS FACTURAS
+![DGII tab en las facturas](https://res.cloudinary.com/drgtdlvxn/image/upload/v1557328463/DGII_REPORTS_ODOO_12_EXAMPLE_01.png)
+
+### RESUMÉN DEL REPORTE FISCAL DEL DGII
+![Reportes físcales DGII extracto/resumen](https://res.cloudinary.com/drgtdlvxn/image/upload/v1557328463/DGII_REPORTS_ODOO_12_EXAMPLE_02.png)
+
+### RESUMEN DEL IT1
+![Resumen del formulario de delcaración de ITBIS](https://res.cloudinary.com/drgtdlvxn/image/upload/v1557328463/DGII_REPORTS_ODOO_12_EXAMPLE_03.png)
+
+### VISTA DEL FORMULARIO 607
+![Vista del formulario 607](https://res.cloudinary.com/drgtdlvxn/image/upload/v1557328463/DGII_REPORTS_ODOO_12_EXAMPLE_04.png)
+
+### VISTA DEL FORMULARIO 606
+![Vista del formulario 606](https://res.cloudinary.com/drgtdlvxn/image/upload/v1557328463/DGII_REPORTS_ODOO_12_EXAMPLE_05.png)
