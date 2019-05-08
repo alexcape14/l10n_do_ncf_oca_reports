@@ -204,8 +204,8 @@ def has_withholding(self, inv):
 '''
 def validateBeforeDisplayInReport(report, inv, defaultValue, paymentForm = False):
     ReportMonth, ReportYear = (int(x) for x in report.name.split("/")) 
-    invoiceMonth = int(inv.date_invoice.strftime('%m'))
-    paymentMonth = int(inv.payment_date.strftime('%m')) if inv.payment_date else False
+    invoiceMonth = int(inv.date_invoice[5:7])
+    paymentMonth = int(inv.payment_date[5:7]) if inv.payment_date else False
 
     if invoiceMonth != paymentMonth and invoiceMonth == ReportMonth:
         return paymentForm if paymentForm else False
